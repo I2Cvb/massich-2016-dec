@@ -7,13 +7,6 @@
 % Use nameref to cite supporting information files (see Supporting Information section for more info)
 \usepackage{nameref,hyperref}
 
-% line numbers
-\usepackage[right]{lineno}
-
-% Use biblatex to manage the referencing
-%
-% \usepackage[style=reading,backend=biber]{biblatex}
-% \usepackage[authoryear, round, sort]{natbib}
 
 % Clever cross referencing. Using cleverref, instead of writting
 % figure~\ref{...} or equation~\ref{...}, only \cref{...} is required.
@@ -24,5 +17,42 @@
 %             Cleveref is recomended to load late
 \usepackage{cleveref}
 
-% To create random text use lipsum
-\usepackage{lipsum}
+
+%% color package
+\usepackage[table]{xcolor}
+\usepackage{color}
+\usepackage{booktabs}
+\usepackage{datatool}
+\usepackage{multirow}
+%\usepackage{arydshln}
+%\usepackage{tabularx}
+\usepackage{courier}
+\usepackage{lscape}
+\usepackage{pdflscape}
+
+% packages for checkmark 
+\usepackage{bbding}
+\usepackage{pifont}
+\usepackage{wasysym}
+\usepackage{amssymb}
+
+\newcommand{\cmark}{\large \color{green!60!black!80}\ding{51}}
+\newcommand{\mmark}{\large {\color{green!60!black!80}\ding{51}}$^{!}$}
+\newcommand{\xmark}{\large \color{red!60!black!80}\ding{55}}
+\newcommand{\cmarksmall}{\color{green!60!black!80}\ding{51}}
+\newcommand{\mmarksmall}{{\color{green!60!black!80}\ding{51}}$^{!}$}
+\newcommand{\xmarksmall}{\color{red!60!black!80}\ding{55}}
+
+%% Colorpackage for table
+\usepackage{colortbl}
+\usepackage{tabularx}
+\usepackage{arydshln}
+
+% SI units
+\usepackage{siunitx}
+% Define the money way to write
+\sisetup{
+  group-four-digits = true,
+  group-separator = {,}
+}
+\DeclareSIUnit\px{px}
