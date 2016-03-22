@@ -18,15 +18,25 @@
 \def \AuthorCemail{g.lemaitre58@gmail.com}
 
 % Institution(s) Name(s)
-\def \InstitutionA{LE2I UMR6306, CNRS, Arts et M\'etiers, Univ. Bourgogne Franche-Comt\'e, 12 rue de la Fonderie, 71200 Le Creusot, France}
-\def \InstitutionA{ViCOROB, Universitat de Girona, Campus Montilivi, Edifici P4, 17071 Girona, Spain}
-\def \InstitutionA{Singapore Eye Research Institute, Singapore National Eye Center, Singapore}
-% Article Title
-\newcommand {\Title} {\ArticleTitle}
+\def \InstitutionA{LE2I UMR6306, CNRS, Arts et M\'etiers\\ Univ. Bourgogne Franche-Comt\'e\\ 12 rue de la Fonderie\\ 71200 Le Creusot, France}
+\def \InstitutionB{ViCOROB, Universitat de Girona\\ Campus Montilivi, Edifici P4\\ 17071 Girona, Spain}
+\def \InstitutionC{Singapore Eye Research Institute\\ Singapore National Eye Center, Singapore}
+\def \InstitutionD{UTP}
 
-% Authors
-\newcommand {\Authors} {\IEEEauthorblockN{\AuthorA}, \IEEEauthorblockN{\AuthorB}}
+% Article title
+\title{Article Title}
 
-% Institution
-\newcommand {\Institutions} {\IEEEauthorblockA{\InstitutionA}\\
-                            Email: \AuthorAemail}
+% Author(s) Name
+\author{\IEEEauthorblockN{\AuthorA, \AuthorH}
+        \IEEEauthorblockA{\InstitutionA}\\
+        Email: \AuthorAemail\\
+        \and
+        \IEEEauthorblockN{\AuthorB, \AuthorC}
+        \IEEEauthorblockA{\InstitutionB}
+        \and
+        \IEEEauthorblockN{\AuthorD, \AuthorE, \AuthorF, \AuthorG}
+        \IEEEauthorblockA{\InstitutionC}
+        \and
+        \IEEEauthorblockN{\AuthorI}
+        \IEEEauthorblockA{\InstitutionD}
+       }
