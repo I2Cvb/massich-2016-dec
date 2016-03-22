@@ -50,6 +50,11 @@
 *.snm
 *.vrb
 
+# other
+*.cb
+*.cb2
+*.soc
+
 #(e)ledmac/(e)ledpar
 *.end
 *.[1-9]
