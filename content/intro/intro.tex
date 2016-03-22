@@ -1,69 +1,65 @@
 % include the figures path relative to the master file
 \graphicspath{ {./content/intro/figures/} }
 
-\section*{Introduction}
+\section{Introduction}
 \label{sec:intro}  % \label{} allows reference to this section
 
-Eye diseases such as \gls{dr} and \gls{dme} are the most common causes of irreversible vision loss in individuals with diabetes.
-Just in United States alone, health care and associated costs related to eye diseases are estimated at almost \SI{500}[\$]{M}~\cite{Sharma2005}.
-Moreover, the prevalent cases of \gls{dr} are expected to grow exponentially affecting over \SI{300}{M} people worldwide by 2025~\cite{Wild2004}.
-Given this scenario, early detection and treatment of \gls{dr} and \gls{dme} play a major role to prevent adverse effects such as blindness.
-\gls{dme} is characterized as an increase in retinal thickness within 1 disk diameter of the fovea center with or without hard exudates and sometimes associated with cysts~\cite{ETDRSG1985}.
-Fundus images which have proven to be very useful in revealing most of the eye pathologies~\cite{Mookiah20132136,Trucco2013} are not as good as \gls{oct} images which provide information about cross-sectional retinal morphology~\cite{Wang2015}.  
+  \added[id=old]{
+    Eye diseases such as \gls{dr} and \gls{dme} are the most common causes of
+    irreversible vision loss in individuals with diabetes.  Just in United States
+    alone, health care and associated costs related to eye diseases are estimated
+    at almost \SI{500}[\$]{M}~\cite{Sharma2005}.  Moreover, the prevalent cases of
+    \gls{dr} are expected to grow exponentially affecting over \SI{300}{M} people
+    worldwide by 2025~\cite{Wild2004}.  Given this scenario, early detection and
+    treatment of \gls{dr} and \gls{dme} play a major role to prevent adverse
+    effects such as blindness.  \gls{dme} is characterized as an increase in
+    retinal thickness within 1 disk diameter of the fovea center with or without
+    hard exudates and sometimes associated with cysts~\cite{ETDRSG1985}.  Fundus
+    images which have proven to be very useful in revealing most of the eye
+    pathologies~\cite{Mookiah20132136,Trucco2013} are not as good as \gls{oct}
+    images which provide information about cross-sectional retinal
+    morphology~\cite{Wang2015}.
+  }
 
-%Indeed, the new generation of \gls{oct} imaging, namely \gls{sdoct} offers high resolution and fast image acquisition, producing from $27,000$ to $40,000$ A-scans/second with an axial resolution ranging from \SIrange{3.5}{6}{\micro \metre}~\cite{Chen2005}. 
+  %Indeed, the new generation of \gls{oct} imaging, namely \gls{sdoct} offers high resolution and fast image acquisition, producing from $27,000$ to $40,000$ A-scans/second with an axial resolution ranging from \SIrange{3.5}{6}{\micro \metre}~\cite{Chen2005}.
 \begin{figure}
-\begin{center}
-\hspace*{\fill}
-\subfigure[Normal]{\includegraphics[scale=0.15]{normal_case}}\hfill
-\subfigure[\gls{dme}-cyst]{\includegraphics[scale=0.15]{dme_cyst}}\hfill
-\subfigure[\gls{dme}-exudate]{\includegraphics[scale=0.15]{dme_exudate}}
-\hspace*{\fill}
-\end{center}
-\caption{ Example of \gls{sdoct} images for normal (a) and \gls{dme} patients (b)-(c) with cyst and exudate, respectively.}
-\label{fig:dme-normal}
+  \begin{center}
+    \hspace*{\fill}
+      \subfigure[Normal]{\includegraphics[scale=0.15]{normal_case}}\hfill
+      \subfigure[\gls{dme}-cyst]{\includegraphics[scale=0.15]{dme_cyst}}\hfill
+      \subfigure[\gls{dme}-exudate]{\includegraphics[scale=0.15]{dme_exudate}}
+      \hspace*{\fill}
+  \end{center}
+  \caption{ Example of \gls{sdoct} images for normal (a) and \gls{dme} patients (b)-(c) with cyst and exudate, respectively.}
+  \label{fig:dme-normal}
 \end{figure}
-Many of the previous works on \gls{oct} image analysis have focused on the problem of retinal layers segmentation, which is a necessary step for retinal thickness measurements~\cite{Chiu2010,Kafieh2013}.
-However, few have addressed the specific problem of \gls{dme} and its associated features detection from \gls{oct} images.
-Figure\,\ref{fig:dme-normal} shows one normal B-scan and two abnormal B-scans.
 
-A summary of the existing work can be found in Table~\ref{tab:survey-tab}.
-Srinivasan\,\textit{et~al.}~\cite{Srinivasan2014} proposed a classification method to distinguish \gls{dme}, \gls{amd} and normal \gls{sdoct} volumes.
-The \gls{oct} images are pre-processed by reducing the speckle noise by enhancing the sparsity in a transform-domain and flattening the retinal curvature to reduce the inter-patient variations.
-Then, \gls{hog} are extracted for each slice of a volume and a linear \gls{svm} is used for classification.
-On a dataset of 45 patients equally subdivided into the three aforementioned classes, this method leads to a correct classification rate of $100 \%$, $100 \%$ and $86.67 \%$ for normal, \gls{dme} and \gls{amd} patients, respectively.
-The images that have been used in their paper, are publicly available but are already preprocessed (i.e., denoised), have different sizes for the \gls{oct} volumes, do not offer a huge variability in term of \gls{dme} lesions, and some of them, without specifying which, have been excluded for the training phase; all these reasons prevent us from using this dataset to benchmark our work. 
+  \added[id=old]{
+    Many of the previous works on \gls{oct} image analysis have focused on the problem of retinal layers segmentation, which is a necessary step for retinal thickness measurements~\cite{Chiu2010,Kafieh2013}.
+    However, few have addressed the specific problem of \gls{dme} and its associated features detection from \gls{oct} images.
+    Figure\,\ref{fig:dme-normal} shows one normal B-scan and two abnormal B-scans.
+  }
 
-Venhuizen\,\textit{et~al.} proposed a method for \gls{oct} images classification using the \gls{bow} models~\cite{Venhuizen2015}.
-The method starts with the detection and selection of keypoints in each individual B-scan, by keeping the most salient points corresponding to the top $3 \%$ of the vertical gradient values. Then, a texton of size $9 \times 9$ pixels is extracted around each keypoint, and \gls{pca} is applied to reduce the dimension of every texton to get a feature vector of size $9$.
-All extracted feature vectors are used to create a codebook using \textit{k}-means clustering.
-Then, each \gls{oct} volume is represented in terms of this codebook and is characterized as a histogram that captures the codebook occurrences.
-These histograms are used as feature vector to train a \gls{rf} with a maximum of $100$ trees.
-The method was used to classify \gls{oct} volumes between \gls{amd} and normal cases and achieved an \gls{auc} of $0.984$ with a dataset of $384$ \gls{oct} volumes.
 
-Liu\,\textit{et~al.} proposed a methodology for detecting macular pathology in \gls{oct} images using \gls{lbp} and gradient information as attributes~\cite{Liu2011}.
-The method starts by aligning and flattening the images and creating a $3$-level multi-scale spatial pyramid.
-The edge and \gls{lbp} histograms are then extracted from each block of every level of the pyramid.
-%is created and edge and \gls{lbp} histograms are extracted in each block at every level of the pyramid.
-All the obtained histograms are concatenated into a global descriptor whose dimensions are reduced using \gls{pca}.
-Finally a \gls{svm} with an \gls{rbf} kernel is used as classifier.
-The method achieved good results in detection \gls{oct} scan containing different pathology such as \gls{dme} or \gls{amd}, with an \gls{auc} of $0.93$ using a dataset of $326$ \gls{oct} scans.
+  Evaluation of the volumetric scan is time consuming, expensive
+  and some pathology signs are easy to miss~\cite{Venhuizen2015}
 
-Lema\^{i}tre~\emph{et~al.}~\cite{Lemaintre2015miccaiOCT} proposed to use 2D and 3D \gls{lbp} features extracted from denoised volumes and dictionary learning using the \gls{bow} models~\cite{Sivic2003}.
-In the proposed method all the dictionaries are learned with same size of ``visual words'' ($k = 32$) and final descriptors are classified using \gls{rf} classifier.
-%The proposed method by Lemaitre~\emph{et~al.}~\cite{Lemaintre2015miccaiOCT} is based on \gls{lbp} features to describe the texture of \gls{oct} images and dictionary learning using the \gls{bow} models~\cite{Sivic2003}.
+  \deleted[id=sik]{
+  $\cdot$ coexistence of multiple pathologies~\cite{Liu2011}
+  $\cdot$ OCT image acquisition has drift~\cite{Liu2011}
+  $\cdot$ variability in shape, size and magnitude within the same pathology~\cite{Liu2011}
+  $\cdot$ retina reflectivity (schuman 2014)~\cite{Liu2011}
+  $\cdot$ inconsistent image quality (barnum 2008)~\cite{Liu2011}
+  }
 
-The work described in this paper is an extension of our previous work~\cite{Lemaintre2015miccaiOCT}.
-In this research, beside the comparison of 2D and 3D features, we explore different possible representations of the features, and different pre-processing steps for OCT data (i.e. aligning, flattening, denoising). 
-We also compare the performances of different classifiers. 
- 
-%The proposed method, which is an extension of our previous work~\cite{Lemaintre2015miccaiOCT}\footnote{The Document source available on Github~\cite{Lemaitre2015}}, is based on \gls{lbp} features to describe the texture of \gls{oct} images and dictionary learning using the \gls{bow} models~\cite{Sivic2003}. 
-%We propose to extract 2D and 3D \gls{lbp} features from \gls{oct} images and volumes, respectively. 
-%The \gls{lbp} descriptors are further extracted from the entire sample or local patches within individual samples. 
-%In this research beside the comparison of 2D and 3D features, we also compare the effects of common pre-processing steps for OCT data (i.e., noise removing, aligning, flattening), study the optimal configuration regarding the \gls{bow} approach in conjunction with different base classifiers.
- 
-This paper is organized as follows: the proposed framework is explained in Sect.\,\ref{sec:method}, while the experiments and results are discussed through Sect.\,\ref{sec:exp} and Sect.\,\ref{sec:res-dis}.
-Finally, the conclusion and avenue for future directions are drawn in Sect.\,\ref{sec:con}.
+  \deleted[id=sik]{
+    This article is structured as follows: Background(Sect.\,\ref{sec:survey}) offers a general idea of the methods reviwed.
+    Materials and methods discusses data and mapping of the methodologies to our framework.
+    Results offers (Sect.\,\ref{sec:results}) (a) individual results of each methodology, as well as our strategy followed to validate that our implementation complies with the results reported by the original work
+    (b) comparative results of the best methodlogy configurations to drive our discussion.
+    Discussion(Sect.\,\ref{sec:discussion}). Conclusion and Further work(Sect.\,\ref{sec:conclusion}).
+  }
+
 % Some stuff that emac's colegues use
 %%% Local Variables:
 %%% mode: late
