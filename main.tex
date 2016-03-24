@@ -1,11 +1,12 @@
 % Template for IEEEtransactions
 % Adapted by Sik in March 2016 to meet his requirements
 %
-\documentclass[twocolumn,letterpaper,10pt]{latex/IEEEtran}
+\documentclass[conference,twocolumn,letterpaper,10pt]{latex/IEEEtran}
 %% Latex documents that need direct input
 %
 \input{./latex/filesystem/ieee_packages.tex}  % contains the latex packages for IEEEtrans
 \input{./latex/filesystem/package.tex}        % contains the latex packages
+\input{./latex/filesystem/package_edition.tex}% contains the latex packages
 % \usepackage[numbers]{natbib}
 \input{latex/filesystem/fileSetup.tex}        % contains package and variables init.
 \input{content/acronym_definition.tex}      % contains the acronims
@@ -30,31 +31,48 @@
 % Variables file
 \input{variables.tex}
 
-% Article title
-\title{\Title}
-
-% Author(s) Name
-\author{\Authors\\
-        \Institutions}
-
 \maketitle
 
 % Please keep the abstract below 300 words
 \begin{abstract}
-\lipsum[1]
+  \added[id=old]{
+    This paper addresses the problem of automatic classification of \gls{sdoct}
+    data for automatic identification of patients with \gls{dme} versus normal
+    subjects.  \gls{oct} has been a valuable diagnostic tool for \gls{dme},
+    which is among the most common causes of irreversible vision loss in
+    individuals with diabetes.  Here, a classification framework with five
+    distinctive steps is proposed and we present an extensive study of each
+    step.  Our method considers combination of various pre-processings in
+    conjunction with \gls{lbp} features and different mapping strategies.
+    Using linear and non-linear classifiers, we tested the developed framework
+    on a balanced cohort of 32 patients.
+  }
+
+  \added[id=old]{
+    Experimental results show that the proposed method outperforms the previous
+    studies by achieving a \gls{se} and \gls{sp} of 81.2\% and 93.7\%,
+    respectively.  Our study concludes that the 3D features and high-level
+    representation of 2D features using patches achieve the best results.  However,
+    the effects of pre-processing is inconsistent with respect to different
+    classifiers and feature configurations.
+  }
 \end{abstract}
 
 \begin{IEEEkeywords}
-Article, IEEE, template
 \end{IEEEkeywords}
 
-% \linenumbers
+\linenumbers
 
 %% Incldue the content without .tex extension
 % \acresetall  % reset the acronyms from the abstract
 \include*{content/intro/intro}          % the file wihtout .tex
-\include*{content/other/other}
-% \nolinenumbers
+\include*{content/survey/background}
+\include*{content/method/dataset}
+\include*{content/method/method}
+\include*{content/results/results}
+\section{Discussion}\label{sec:discussion}
+\section{Conclusion and Further work}\label{sec:conclusion}
+\nolinenumbers
 
 %\section*{References}
 % Either type in your references using
@@ -76,7 +94,7 @@ Article, IEEE, template
 % Bibliography
 \bibliographystyle{IEEEtran}
 % Bibliography file
-\bibliography{IEEEabrv,content/lit_review,content/biblatex-examples}
+\bibliography{IEEEabrv,content/bib/literature_review,content/bib/medical/medical,content/bib/retinopathy/retinopathy}
 \fi
 
 

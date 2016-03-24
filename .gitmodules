@@ -1,0 +1,6 @@
+[submodule "content/bib/retinopathy"]
+	path = content/bib/retinopathy
+	url = https://gist.github.com/c4cfcdb09a47aba91079.git
+[submodule "content/bib/medical"]
+	path = content/bib/medical
+	url = https://gist.github.com/38086f9bd63c7e9bd6b9.git
