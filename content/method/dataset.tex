@@ -1,0 +1,26 @@
+% include the figures path relative to the master file
+\graphicspath{ {./content/method/figures/} }
+
+\section{Data}\label{sec:data}
+\deleted[id=sik]{
+  Despite Venhuizen et al. tested on a public dataset~\cite{dukeBIG}, this dataset is intended to AMD.
+  Srinivasan also tested on a public dataset~\cite{dukeSmall}, however the images are cropped and filtered etc.
+  So thats why we collected the SERI dataset.
+}
+
+\added[id=old]{
+This dataset was acquired by the Singapore Eye Research Institute (SERI), using
+CIRRUS TM (Carl Zeiss Meditec, Inc., Dublin, CA) \gls{sdoct} device. The dataset
+consists of 32 \gls{oct} volumes (16 \gls{dme} and 16 normal cases). Each volume
+contains 128 B-scan with resolution of 512 $\times$ 1024 pixels.  All
+\gls{sdoct} images are read and assessed by trained graders and identified as
+normal or \gls{dme} cases based on evaluation of retinal thickening, hard
+exudates, intraretinal cystoid space formation and subretinal fluid.
+}
+
+\begin{figure}
+  \centering{
+    \includegraphics[width=1\linewidth]{bbdd}}
+    \caption{Experimental Setup}
+  \label{fig:ML-scheme}
+\end{figure}

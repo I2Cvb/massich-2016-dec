@@ -12,6 +12,8 @@ Figure~\ref{fig:ML-scheme} outlines these 5 steps and illustrates how the method
   \label{fig:ML-scheme}
 \end{figure*}
 
+\input{content/method/Survey-Table.tex}
+
 \subsection{\deleted[id=sik]{method comments}}
 \todo[inline]{here goes a description left to right of the modules, making remarks of the difference between the needs of each method.}
 \added[id=old]{
@@ -24,22 +26,6 @@ Finally, the classification step is presented in Sect.\,\ref{subsec:cls}.
 
 \deleted[id=sik]{The mapping in A is computed in this manner while in B this comes on the other side bla bla bla}
 
-\subsection{Data}\label{sec:exp:data}
-\deleted[id=sik]{
-  Despite Venhuizen et al. tested on a public dataset~\cite{dukeBIG}, this dataset is intended to AMD.
-  Srinivasan also tested on a public dataset~\cite{dukeSmall}, however the images are cropped and filtered etc.
-  So thats why we collected the SERI dataset.
-}
-
-\added[id=old]{
-This dataset was acquired by the Singapore Eye Research Institute (SERI), using
-CIRRUS TM (Carl Zeiss Meditec, Inc., Dublin, CA) \gls{sdoct} device. The dataset
-consists of 32 \gls{oct} volumes (16 \gls{dme} and 16 normal cases). Each volume
-contains 128 B-scan with resolution of 512 $\times$ 1024 pixels.  All
-\gls{sdoct} images are read and assessed by trained graders and identified as
-normal or \gls{dme} cases based on evaluation of retinal thickening, hard
-exudates, intraretinal cystoid space formation and subretinal fluid.
-}
 
 \subsection{Validation}\label{sec:exp:validation}
 \added[id=old]{
