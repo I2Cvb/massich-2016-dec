@@ -1,0 +1,403 @@
+% This file was created with JabRef 2.10b2.
+% Encoding: UTF-8
+
+
+@Article{Abramoff2010,
+  Title                    = {Retinal image analysis: a review},
+  Author                   = {Abramoff, M. D. and Garvin, M. K. and Sonka, M.},
+  Journal                  = {IEEE Review Biomed. Eng.},
+  Year                     = {2010},
+  Pages                    = {169--208},
+  Volume                   = {3}
+}
+
+@Article{aizerman1964,
+  Title                    = {Theoretical foundations of the potential function method in pattern recognition learning},
+  Author                   = {Aizerman, A. and Braverman, E. M. and Rozoner, L. I.},
+  Journal                  = {Automation and Remote Control},
+  Year                     = {1964},
+  Pages                    = {821--837},
+  Volume                   = {25}
+}
+
+@InProceedings{arthur2007k,
+  Title                    = {k-means++: The advantages of careful seeding},
+  Author                   = {Arthur, David and Vassilvitskii, Sergei},
+  Booktitle                = {Proceedings of the eighteenth annual ACM-SIAM symposium on Discrete algorithms},
+  Year                     = {2007},
+  Organization             = {Society for Industrial and Applied Mathematics},
+  Pages                    = {1027--1035}
+}
+
+@Article{JiangEtAl13,
+  Title                    = {A Dynamic Appearance Descriptor Approach to Facial Actions Temporal Modelling},
+  Author                   = {B. Jiang, M. F. Valstar, B. Martinez and M. Pantic},
+  Journal                  = {IEEE Transactions on Cybernetics},
+  Year                     = {2014},
+  Number                   = {2},
+  Pages                    = {161--174},
+  Volume                   = {44},
+
+  Owner                    = {mojdeh},
+  Timestamp                = {2015.06.11}
+}
+
+@InCollection{becker2013supervised,
+  Title                    = {Supervised feature learning for curvilinear structure segmentation},
+  Author                   = {Becker, C. and Rigamonti, R. and Lepetit, V. and Fua, P.},
+  Booktitle                = {Medical Image Computing and Computer-Assisted Intervention--MICCAI 2013},
+  Publisher                = {Springer},
+  Year                     = {2013},
+  Pages                    = {526-533}
+}
+
+@Article{breiman2001random,
+  Title                    = {Random forests},
+  Author                   = {Breiman, Leo},
+  Journal                  = {Machine learning},
+  Year                     = {2001},
+  Number                   = {1},
+  Pages                    = {5--32},
+  Volume                   = {45},
+
+  Publisher                = {Springer}
+}
+
+@InProceedings{buades2005non,
+  Title                    = {A non-local algorithm for image denoising},
+  Author                   = {Buades, Antoni and Coll, Bartomeu and Morel, Jean-Michel},
+  Booktitle                = {Computer Vision and Pattern Recognition, 2005. CVPR 2005. IEEE Computer Society Conference on},
+  Year                     = {2005},
+  Organization             = {IEEE},
+  Pages                    = {60--65},
+  Volume                   = {2}
+}
+
+@Article{byrd1994representations,
+  Title                    = {Representations of quasi-Newton matrices and their use in limited memory methods},
+  Author                   = {Byrd, R. H. and Nocedal, J. and Schnabel, R. B.},
+  Journal                  = {Mathematical Programming},
+  Year                     = {1994},
+  Number                   = {1-3},
+  Pages                    = {129--156},
+  Volume                   = {63}
+}
+
+@Article{celebi2013comparative,
+  Title                    = {A comparative study of efficient initialization methods for the k-means clustering algorithm},
+  Author                   = {Celebi, M Emre and Kingravi, Hassan A and Vela, Patricio A},
+  Journal                  = {Expert Systems with Applications},
+  Year                     = {2013},
+  Number                   = {1},
+  Pages                    = {200--210},
+  Volume                   = {40},
+
+  Publisher                = {Elsevier}
+}
+
+@Article{Chen2005,
+  Title                    = {Spectral domain optical coherence tomography: ultra-high speed, ultra-high resolution ophtalmic imaging},
+  Author                   = {Chen, T. C. and Cense, B. and Pierce, M. C. and Nassif, N. and Park, B. H. and Yun, S. H. and White, B. R. and Bouma, B. E. and Tearney, G. J. and {de Boer}, J. F.},
+  Journal                  = {JAMA Ophthalmology},
+  Year                     = {2005},
+  Number                   = {12},
+  Pages                    = {1715--1720},
+  Volume                   = {123}
+}
+
+@Article{Chiu2010,
+  Title                    = {Automatic segmentation of seven retinal layers in SD-OCT images congruent with expert manual segmentation},
+  Author                   = {Chiu, S. J. and Li, X. T. and Nicholas, P. and Toth, C. A. and Izatt, J. A. and Farsiu, S.},
+  Journal                  = {Optic Express},
+  Year                     = {2010},
+  Number                   = {18},
+  Pages                    = {19413--19428},
+  Volume                   = {18}
+}
+
+@Article{Coupe2009,
+  Title                    = {{{N}onlocal means-based speckle filtering for ultrasound images}},
+  Author                   = {Coupe, P. and Hellier, P. and Kervrann, C. and Barillot, C. },
+  Journal                  = {IEEE TIP},
+  Year                     = {2009},
+
+  Month                    = {Oct},
+  Pages                    = {2221--2229}
+}
+
+@Article{cox1958regression,
+  Title                    = {The regression analysis of binary sequences},
+  Author                   = {Cox, D. R.},
+  Journal                  = {Journal of the Royal Statistical Society. Series B (Methodological)},
+  Year                     = {1958},
+  Pages                    = {215--242}
+}
+
+@Article{dabov2007image,
+  Title                    = {Image denoising by sparse 3-D transform-domain collaborative filtering},
+  Author                   = {Dabov, Kostadin and Foi, Alessandro and Katkovnik, Vladimir and Egiazarian, Karen},
+  Journal                  = {Image Processing, IEEE Transactions on},
+  Year                     = {2007},
+  Number                   = {8},
+  Pages                    = {2080--2095},
+  Volume                   = {16},
+
+  Publisher                = {IEEE}
+}
+
+@Article{ETDRSG1985,
+  Title                    = {Photocoagulation for diabetic macular edema: early treatment diabetic retinopathy study report no 1},
+  Author                   = {{Early Treatment Diabetic Retinopathy Study Group}},
+  Journal                  = {JAMA Ophthalmology},
+  Year                     = {1985},
+  Number                   = {12},
+  Pages                    = {1796--1806},
+  Volume                   = {103}
+}
+
+@Article{friedman2002stochastic,
+  Title                    = {Stochastic gradient boosting},
+  Author                   = {Friedman, J. H},
+  Journal                  = {Computational Statistics \& Data Analysis},
+  Year                     = {2002},
+  Number                   = {4},
+  Pages                    = {367--378},
+  Volume                   = {38}
+}
+
+@Article{Garvin2009,
+  Title                    = {Automated 3-D Intraretinal Layer Segmentation of Macular Spectral-Domain Optical Coherence Tomography Images},
+  Author                   = {Garvin, M.K. and Abramoff, M.D. and Xiaodong Wu and Russell, S.R. and Burns, T.L. and Sonka, M.},
+  Journal                  = {Medical Imaging, IEEE Transactions on},
+  Year                     = {2009},
+
+  Month                    = {Sept},
+  Number                   = {9},
+  Pages                    = {1436--1447},
+  Volume                   = {28}
+}
+
+@Article{giancardo2011textureless,
+  Title                    = {Textureless macula swelling detection with multiple retinal fundus images},
+  Author                   = {Giancardo, L. and Meriaudeau, F. and Karnowski, T. P. and Tobin Jr., K. W. and Grisan, E. and Favaro, P. and Ruggeri, A. and Chaum, E.},
+  Journal                  = {Biomedical Engineering, IEEE Transactions on},
+  Year                     = {2011},
+  Number                   = {3},
+  Pages                    = {795--799},
+  Volume                   = {58}
+}
+
+@Article{Kafieh2013,
+  Title                    = {Intra-retinal layer segmentation of 3d optical coherence tomography using coarse grained diffusion map},
+  Author                   = {Kafieh, R. and Rabbani, H. and Abramoff, M. D. and Sonka, M.},
+  Journal                  = {Medical Image Analysis},
+  Year                     = {2013},
+  Pages                    = {907--928},
+  Volume                   = {17}
+}
+
+@InProceedings{lemaitre2015boosting,
+  Title                    = {A Boosting Approach for Prostate Cancer Detection using Multi-parametric MRI},
+  Author                   = {Lemaitre, G. and Massich, J. and Marti, R. and Freixenet, J. and Vilanova, J. C. and Walker, P. M. and Sidibe, D. and Meriaudeau, F.},
+  Booktitle                = {International Conference on Quality Control and Artificial Vision (QCAV2015)},
+  Year                     = {2015},
+  Organization             = {SPIE}
+}
+
+@Misc{Lemaitre2015,
+  Title                    = {retinopathy: JO-OMIA-2015},
+
+  Author                   = {Lemaitre, G. and Rastgoo, M. and Massich, J.},
+  Month                    = Nov,
+  Year                     = {2015},
+
+  Doi                      = {10.5281/zenodo.34277},
+  Url                      = {http://dx.doi.org/10.5281/zenodo.34277}
+}
+
+@InCollection{Lemaintre2015miccaiOCT,
+  Title                    = {Classification of {SD-OCT} Volumes with {LBP}: Application to DME Detection},
+  Author                   = {Lemaitre, G. and Rastgoo, M. and Massich, J. and Sankar, S. and Meriaudeau, F. and Sidibe, D.},
+  Booktitle                = {Medical Image Computing and Computer-Assisted Intervention\,(MICCAI), Ophthalmic Medical Image Analysis Workshop\,(OMIA)},
+  Year                     = {2015}
+}
+
+@Article{Liu2011,
+  Title                    = {Automated macular pathology diagnosis in retinal OCT images using multi-scale spatial pyramid and local binary patterns in texture and shape encoding},
+  Author                   = {Liu, Y-Y. and Chen, M. and Ishikawa, H. and Wollstein, G. and Schuman, J. S. and Rehg. J. M.},
+  Journal                  = {Medical Image Analysis},
+  Year                     = {2011},
+  Pages                    = {748--759},
+  Volume                   = {15}
+}
+
+@Article{Mookiah20132136,
+  Title                    = {Computer-aided diagnosis of diabetic retinopathy: A review },
+  Author                   = {Mookiah, M. R. K. and Acharya, U. R. and Chua, C. K. and Lim, C. M. and Ng, E.Y.K. and Laude, A.},
+  Journal                  = {Computers in Biology and Medicine },
+  Year                     = {2013},
+  Number                   = {12},
+  Pages                    = {2136--2155},
+  Volume                   = {43}
+}
+
+@Book{murphy2012machine,
+  Title                    = {Machine learning: a probabilistic perspective},
+  Author                   = {Murphy, K. P.},
+  Publisher                = {MIT press},
+  Year                     = {2012}
+}
+
+@InCollection{nowak2006sampling,
+  Title                    = {Sampling strategies for bag-of-features image classification},
+  Author                   = {Nowak, E. and Jurie, F. and Triggs, B.},
+  Booktitle                = {Computer Vision--ECCV 2006},
+  Year                     = {2006},
+  Pages                    = {490--503}
+}
+
+@Article{ojala2002multiresolution,
+  Title                    = {Multiresolution gray-scale and rotation invariant texture classification with local binary patterns},
+  Author                   = {Ojala, Timo and Pietik{\"a}inen, Matti and M{\"a}enp{\"a}{\"a}, Topi},
+  Journal                  = {Pattern Analysis and Machine Intelligence, IEEE Transactions on},
+  Year                     = {2002},
+  Number                   = {7},
+  Pages                    = {971--987},
+  Volume                   = {24},
+
+  Publisher                = {IEEE}
+}
+
+@Article{Quellec2010,
+  Title                    = {Three-dimensional analysis of retinal layer texture: identification of fluid-filled regions in SD-OCT of the macula},
+  Author                   = {Quellec, G. and Lee, K. and Dolejsi, M. and Garvin, M. K. and Abramoff, M. D. and Sonka, M.},
+  Journal                  = {IEEE Trans. on Medical Imaging},
+  Year                     = {2010},
+  Pages                    = {1321--1330},
+  Volume                   = {29}
+}
+
+@Article{schmitt1999speckle,
+  Title                    = {Speckle in optical coherence tomography},
+  Author                   = {Schmitt, J. M. and Xiang, S. H. and Yung, K. M.},
+  Journal                  = {Journal of biomedical optics},
+  Year                     = {1999},
+  Number                   = {1},
+  Pages                    = {95--105},
+  Volume                   = {4},
+
+  Publisher                = {International Society for Optics and Photonics}
+}
+
+@Article{Sharma2005,
+  Title                    = {The impact of diabetic retinopathy on health-related quality of life},
+  Author                   = {Sharma, S. and Oliver-Hernandez, A. and Liu, W. and Walt, J.},
+  Journal                  = {Current Opinion in Ophtalmology},
+  Year                     = {2005},
+  Pages                    = {155--159},
+  Volume                   = {16}
+}
+
+@InProceedings{Sivic2003,
+  Title                    = {Video Google: a text retrieva approach to object matching in videos},
+  Author                   = {Sivic, J. and Zisserman, A.},
+  Booktitle                = {IEEE ICCV},
+  Year                     = {2003},
+  Pages                    = {1470--1477}
+}
+
+@Article{Srinivasan2014,
+  Title                    = {Fully automated detection of diabetic macular edema and dry age-related macular degeneration from optical coherence tomography images},
+  Author                   = {Srinivasan, P. P. and Kim, L. A. and Mettu, P. S. and Cousins, S. W. and Comer, G. M. and Izatt, J. A. and Farsiu, S.},
+  Journal                  = {Biomedical Optical Express},
+  Year                     = {2014},
+  Number                   = {10},
+  Pages                    = {3568--3577},
+  Volume                   = {5}
+}
+
+@Article{Trucco2013,
+  Title                    = {Validation retinal fundus image analysis algorithms: issues and proposal},
+  Author                   = {Trucco, E. and Ruggeri, A. and Karnowski, T. and Giancardo, L. and Chaum, E. and Hubschman, J.P. and al-Diri, B. and Cheung, C.Y. and Wong, D. and Abramoff, M. and Lim, G. and Kumar, D. and Burlina, P. and Bressler, N. M. and Jelinek, H. F. and Meriaudeau, F. and Quellec, G. and MacGillivray, T. and Dhillon, B.},
+  Journal                  = {Investigative Ophthalmology \& Visual Science},
+  Year                     = {2013},
+  Number                   = {5},
+  Pages                    = {3546--3569},
+  Volume                   = {54}
+}
+
+@Article{vapnik1963generalized,
+  Title                    = {Generalized portrait method for pattern recognition},
+  Author                   = {Vapnik, V. and Lerner, A. J.},
+  Journal                  = {Automation and Remote Control},
+  Year                     = {1963},
+  Number                   = {6},
+  Pages                    = {774--780},
+  Volume                   = {24}
+}
+
+@InProceedings{Venhuizen2015,
+  Title                    = {Automated age-related macular degeneration classification in {OCT} using unsupervised feature learning},
+  Author                   = {Venhuizen, F. G. and van Ginneken, B. and Bloemen, B. and van Grisven, M. J. P. P. and Philipsen, R. and Hoyng, C. and Theelen, T. and Sanchez, C. I.},
+  Booktitle                = {SPIE Medical Imaging},
+  Year                     = {2015},
+  Pages                    = {94141l},
+  Volume                   = {9414}
+}
+
+@Article{Wang2015,
+  Title                    = {{{C}omparison of {P}revalence of {D}iabetic {M}acular {E}dema {B}ased on {M}onocular {F}undus {P}hotography vs {O}ptical {C}oherence {T}omography}},
+  Author                   = {Wang, Y. T. and Tadarati, M. and Wolfson, Y. and Bressler, S. B. and Bressler, N. M. },
+  Journal                  = {JAMA Ophthalmology},
+  Year                     = {2015},
+
+  Month                    = {Dec},
+  Pages                    = {1--7}
+}
+
+@Article{Wild2004,
+  Title                    = {Global prevalence of diabetes estimates for the year 2000 and projections for 2030},
+  Author                   = {Wild, S. and Roglic, G. and Green, A. and Sicree, R. and King, H.},
+  Journal                  = {Diabetes Care},
+  Year                     = {2004},
+  Number                   = {5},
+  Pages                    = {1047--1053},
+  Volume                   = {27}
+}
+
+@Article{zhao2012rotation,
+  Title                    = {Rotation-invariant image and video description with local binary pattern features},
+  Author                   = {Zhao, Guoying and Ahonen, Timo and Matas, Ji{\v{r}}{\'\i} and Pietik{\"a}inen, Matti},
+  Journal                  = {Image Processing, IEEE Transactions on},
+  Year                     = {2012},
+  Number                   = {4},
+  Pages                    = {1465--1477},
+  Volume                   = {21},
+
+  Owner                    = {mojdeh},
+  Publisher                = {IEEE},
+  Timestamp                = {2015.06.11}
+}
+
+@Article{zhao2007dynamic,
+  Title                    = {Dynamic texture recognition using local binary patterns with an application to facial expressions},
+  Author                   = {Zhao, Guoying and Pietikainen, Matti},
+  Journal                  = {Pattern Analysis and Machine Intelligence, IEEE Transactions on},
+  Year                     = {2007},
+  Number                   = {6},
+  Pages                    = {915--928},
+  Volume                   = {29},
+
+  Owner                    = {mojdeh},
+  Publisher                = {IEEE},
+  Timestamp                = {2015.06.11}
+}
+
+@InProceedings{zheng2007general,
+  Title                    = {A general boosting method and its application to learning ranking functions for web search},
+  Author                   = {Zheng, Z. and Zha, H. and Zhang, T. and Chapelle, O. and Chen, K. and Sun, G.},
+  Booktitle                = {Advances in neural information processing systems},
+  Year                     = {2007},
+  Pages                    = {1697--1704}
+}
+
