@@ -4,32 +4,32 @@
 \footnotesize{
 \begin{tabular}{l c cccc	 c c c c }
 \toprule
-Ref & Data  & \multicolumn{4}{c}{Pre-processing} & Features &  Mapping &  Representation & Classification\\
+\multicolumn{1}{c}{Ref} & Data  & \multicolumn{4}{c}{Pre-processing} & Features &  Mapping &  Representation & Classification\\
     & size &  &  &  &  &  &  &  & \\
    \cmidrule(l){3-6} 
     &      & De-noise & Flatten & Aligning & Cropping &   &  &   &    \\
 \midrule
 & & & & & & & & & \\
 %Venhuizen\,\textit{et al.}~
-Venhuizen\,\textit{et al.}~\cite{Venhuizen2015} & 384 &  & & & & Texton & Local   &\gls{bow}, \gls{pca}  & \gls{rf} \\
+Venhuizen \textit{et al.}~\cite{Venhuizen2015} & 384 &  & & & & Texton & Local   &\gls{bow}, \gls{pca}  & \gls{rf} \\
 & & & & & & & & & \\
 %Srinivansan\,\textit{et al.}~
-Srinivasab\,\textit{et al.}~\cite{Srinivasan2014} &  45 & $\checkmark$ & $\checkmark$ &  & $\checkmark$ & \gls{hog} & Global & linear-\gls{svm} \\
+Srinivasan \textit{et al.}~\cite{Srinivasan2014} &  45 & $\checkmark$ & $\checkmark$ &  & $\checkmark$ & \gls{hog} & Global & &  linear-\gls{svm} \\
 & & & & & & & & & \\
 
 
 %Lema\^itre\,\textit{et al.}~
-Lemaitre\,\textit{et al.}~\cite{Lemaintre2015miccaiOCT} &  32  & $\checkmark$ &  &  &  & \gls{lbp} & Local &  \gls{pca}, &  \gls{rf} \\
-& & & & & &\gls{lbptop} & Global & \gls{bow}, histogram & \\ 
+Lemaitre \textit{et al.}~\cite{Lemaintre2015miccaiOCT} &  32  & $\checkmark$ &  &  &  & \gls{lbp} & Local &  \gls{pca}, &  \gls{rf} \\
+& & & & & &\gls{lbptop} & Global & \gls{bow}, Histogram & \\ 
 & & & & & & & & & \\
 
 %Liu\,\textit{et al.}~
-Liu\,\textit{et al.}~\cite{Liu2011} &  326 &  & $\checkmark$ & $\checkmark$ &  &  Edge, \gls{lbp} & Local & \gls{pca}& \gls{svm}-\gls{rbf} \\
+Liu \textit{et al.}~\cite{Liu2011} &  326 &  & $\checkmark$ & $\checkmark$ &  &  Edge, \gls{lbp} & Local & \gls{pca}& \gls{svm}-\gls{rbf} \\
 & & & & & & & & & \\
 %\midrule
 \hdashline \noalign{\vskip 3pt}
-Sankar\,\textit{et al.}~\cite{sankar2016classification} & 32 & $\checkmark$ & $\checkmark$& & $\checkmark$ & intensities & Global & \gls{gmm} & Mahalanobis \\
- & & & & & & -pixels & & & -distance\\
+Sankar \textit{et al.}~\cite{sankar2016classification} & 32 & $\checkmark$ & $\checkmark$& & $\checkmark$ & Pixel & Global & \gls{gmm} & Mahalanobis \\
+ & & & & & & -intensities & & & -distance\\
 \bottomrule
 \end{tabular}}}
 \label{tab:survey-tab}
