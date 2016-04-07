@@ -1,5 +1,6 @@
 % include the figures path relative to the master file
-\graphicspath{ {./content/method/figures/} } \section{Review}\label{sec:review}
+\graphicspath{ {./content/method/figures/} }
+\section{Review}\label{sec:review}
 This section reviews the recent and the state-of-the-art methods in
 classification of \gls{sdoct} volumes as normal vs. abnormal.  These methods
 can be categorized into two groups, supervised and semi-supervised explained in
@@ -164,13 +165,14 @@ with an \gls{auc} of $0.93$ using a dataset of $326$ \gls{oct} scans.
 
 
 
-\subsection{Semi-supervised methods} An example of semi-supervised approach for
-\gls{sdoct} classification is recently proposed by Sankar. \textit{et
-al.}~\cite{sankar2016classification}.  The proposed method is based on
-appearance modeling of normal \gls{oct} images using \gls{gmm} and anomaly
-detection.  The abnormal B-scans are detected as outliers to the fitted
-\gls{gmm} and volume classification is performed based on the number of
-detected outliers in the volume.
+\subsection{Semi-supervised methods}
+An example of semi-supervised approach for \gls{sdoct} classification is
+recently proposed by Sankar. \textit{et al.}~\cite{sankar2016classification}.
+The proposed method is based on appearance modeling of normal \gls{oct} images
+using \gls{gmm} and anomaly detection.  The abnormal B-scans are detected as
+outliers to the fitted \gls{gmm} and volume classification is performed based
+on the number of detected outliers in the volume.
+
 %The proposed method is based on modeling the appearance of the normal
 %\gls{oct} images using a \gls{gmm} and detecting abnormal \gls{oct} images as
 %outliers.  Use an anomaly detection approach to identify abnormal B-scan as
@@ -189,13 +191,21 @@ umber of outliers (abnormal) B-scans per volume.
 
 
 Table~\ref{tab:survey-tab} summarizes the aforementioned methods in terms of
-the proposed framework.  \begin{figure*} \centering{
-\includegraphics[width=1\linewidth]{ml-2}} \caption{Common framework}
-\label{fig:ML-scheme} \end{figure*} \input{content/method/Survey-Table.tex}
+the proposed framework.
+
+\begin{figure*}
+  \centering{
+  \includegraphics[width=1\linewidth]{ml-2}}
+  \caption{Common framework}
+  \label{fig:ML-scheme}
+\end{figure*}
+
+\input{content/method/Survey-Table.tex}
 
 
-\section{\replaced[id=sik]{Experimental Setup}{Materials and
-Methods}}\label{sec:method}\label{sec:exp}
+\section{\replaced[id=sik]{Experimental Setup}{Materials and Methods}}
+\label{sec:method}\label{sec:exp}
+
 %The experimental set-up is formulated as a standard classification procedure
 %consisting of 5 steps.  Figure~\ref{fig:ML-scheme} outlines these 5 steps and
 %illustrates how the methodologies have been translated to such schema.
@@ -204,10 +214,13 @@ Methods}}\label{sec:method}\label{sec:exp}
 %  \caption{Experimental Setup} \label{fig:ML-scheme} \end{figure*}
 
 
-\subsection{\deleted[id=sik]{method comments}} \todo[inline]{here goes
-  a description left to right of the modules, making remarks of the difference
-  between the needs of each method.} \added[id=old]{ First, the \gls{oct}
-  volumes are pre-processed as presented in details in
+\subsection{\deleted[id=sik]{method comments}}
+\todo[inline]{
+  here goes a description left to right of the modules, making remarks of the
+  difference between the needs of each method.
+}
+\added[id=old]{
+  First, the \gls{oct} volumes are pre-processed as presented in details in
   Sect.\,\ref{subsec:prepro}.
 %Then toward a final descriptor \gls{lbp} and \gls{lbptop} features are
   %extracted with different mapping strategy and represented using two
@@ -218,5 +231,6 @@ Sect.\,\ref{subsec:mapping}, and Sect.\,\ref{subsec:fearep}, respectively.
 %{\color{red}The feature extraction, mapping, and representation are presented
 %in depth in Sect.\,\ref{subsec:feaext}, Sect.\,\ref{subsec:mapping}, and
 %Sect.\,\ref{subsec:fearep}, respectively. CHECK THE SECTION ORDERING}
-Finally, the classification step is presented in Sect.\,\ref{subsec:cls}.  }
+Finally, the classification step is presented in Sect.\,\ref{subsec:cls}.
+}
 
