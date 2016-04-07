@@ -1,39 +1,40 @@
-\begin{table*}
+\begin{table}
 \caption{Summary of the stat-of-the-art methods based on our common framework, the dashed line separates the supervised and semi-supervised methods.}
-\resizebox{1.05\linewidth}{!}{
+\resizebox{1\linewidth}{!}{
 \footnotesize{
-\begin{tabular}{l c cccc	 c c c c }
+\begin{tabular}{l c	c c c c }
 \toprule
-\multicolumn{1}{c}{Ref} & Data  & \multicolumn{4}{c}{Pre-processing} & Features &  Mapping &  Representation & Classification\\
-    & size &  &  &  &  &  &  &  & \\
-   \cmidrule(l){3-6} 
-    &      & De-noise & Flatten & Aligning & Cropping &   &  &   &    \\
+\multicolumn{1}{c}{Ref} & Pre-processing & Features &  Mapping &  Representation & Classification\\
+    &  &  &  &  & \\
 \midrule
-& & & & & & & & & \\
+	&  &  &  &  & \\
 %Venhuizen\,\textit{et al.}~
-Venhuizen \textit{et al.}~\cite{Venhuizen2015} & 384 &  & & & & Texton & Local   &\gls{bow}, \gls{pca}  & \gls{rf} \\
-& & & & & & & & & \\
+Venhuizen \textit{et al.}~\cite{Venhuizen2015} &  & Texton & Local   &\gls{bow}, \gls{pca}  & \gls{rf} \\
+	&  &  &  &  & \\
 %Srinivansan\,\textit{et al.}~
-Srinivasan \textit{et al.}~\cite{Srinivasan2014} &  45 & $\checkmark$ & $\checkmark$ &  & $\checkmark$ & \gls{hog} & Global & &  linear-\gls{svm} \\
-& & & & & & & & & \\
-
-
+\multirow{3}{*}{Srinivasan \textit{et al.}~\cite{Srinivasan2014}} & De-noise & \multirow{3}{*}{\gls{hog}} & \multirow{3}{*}{Global} & &  \multirow{3}{*}{linear-\gls{svm}} \\
+ & Flatten & & & & \\
+ & Cropped & & & & \\
+	&  &  &  &  & \\
 %Lema\^itre\,\textit{et al.}~
-Lemaitre \textit{et al.}~\cite{Lemaintre2015miccaiOCT} &  32  & $\checkmark$ &  &  &  & \gls{lbp} & Local &  \gls{pca}, &  \gls{rf} \\
-& & & & & &\gls{lbptop} & Global & \gls{bow}, Histogram & \\ 
-& & & & & & & & & \\
+Lemaitre \textit{et al.}~\cite{Lemaintre2015miccaiOCT} & De-noised & \gls{lbp} & Local &  \gls{pca}, &  \gls{rf} \\
+& & \gls{lbptop} & Global & \gls{bow}, Histogram & \\ 
+	&  &  &  &  & \\
 
 %Liu\,\textit{et al.}~
-Liu \textit{et al.}~\cite{Liu2011} &  326 &  & $\checkmark$ & $\checkmark$ &  &  Edge, \gls{lbp} & Local & \gls{pca}& \gls{svm}-\gls{rbf} \\
-& & & & & & & & & \\
+\multirow{2}{*}{Liu \textit{et al.}~\cite{Liu2011}} & Flatten & \multirow{2}{*}{Edge, \gls{lbp}} & \multirow{2}{*}{Local} & \multirow{2}{*}{\gls{pca}}& \multirow{2}{*}{\gls{rbf}-\gls{svm}} \\
+& Aligned & & & & \\
+	&  &  &  &  & \\
 %\midrule
 \hdashline \noalign{\vskip 3pt}
-Sankar \textit{et al.}~\cite{sankar2016classification} & 32 & $\checkmark$ & $\checkmark$& & $\checkmark$ & Pixel & Global & \gls{gmm} & Mahalanobis \\
- & & & & & & -intensities & & & -distance\\
+\multirow{3}{*}{Sankar \textit{et al.}~\cite{sankar2016classification}} & De-noised & Pixel & \multirow{3}{*}{Global} & \multirow{3}{*	}{\gls{pca}} & Mahalanobis \\
+ & Flatten &-intensities & & & -distance\\
+ & Cropped & & & & to \gls{gmm}\\ 
 \bottomrule
-\end{tabular}}}
+\end{tabular}}
+}
 \label{tab:survey-tab}
-\end{table*}
+\end{table}
 
 %\begin{table*}
 %\caption{Summary of the state-of-the-art methods.}
