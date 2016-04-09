@@ -5,7 +5,8 @@ This section reviews the recent and the state-of-the-art methods in classificati
 These methods can be categorized into two groups, supervised and semi-supervised explained in the following.
 
 % Common framework
-\added[id=mojh]{ All the previously mentioned methods follow a similar pipeline or framework, which consists of different steps.
+\added[id=mojh]{
+  All the previously mentioned methods follow a similar pipeline or framework, which consists of different steps.
   We categorized these steps as pre-processing, feature extraction, mapping, feature representation and finally classification, as it is shown in Fig.\,\ref{fig:ML-scheme}.
   Pre-processing of \gls{oct} volumes, as noted in Sect.\,\ref{sec:review}, consists of denoising, flattening the retinal curvature, aligning the B-scans through the whole volume and finally cropping or resizing the volumes.
   Feature extraction refers to extraction of different textural and shape information from the B-scan or the volumes.
@@ -29,6 +30,13 @@ our common framework is described in Sect.~\textit{experiments}.
 %in all the repositories
 %available~\cite{repo_srini,repo_ven,repo_liu,repo_des,repo_lem}.
 \subsection{Supervised methods}
+
+\begin{figure*}
+  \centering{
+  \includegraphics[width=1\linewidth]{ml-2}}
+  \caption{Common framework}
+  \label{fig:ML-scheme}
+\end{figure*}
 
 Venhuizen \textit{et al.} proposed a supervised method for \gls{sdoct} image classification using \gls{bow} models~\cite{Venhuizen2015}.
 With the aim of \gls{amd} versus normal volumes classification, the method starts with the detection and selection of keypoints in each individual B-scan. %by keeping the most salient points corresponding to the top $3 \%$ of the vertical gradient values.
