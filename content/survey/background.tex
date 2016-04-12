@@ -7,25 +7,33 @@ The methods are categorized in terms of its learning strategy, namely: supervise
 
 \subsection{Supervised methods}
 % Common framework
-\added[id=mojh]{
-  All the previously mentioned methods follow a similar pipeline or framework, which consists of different steps.
-  We categorized these steps as pre-processing, feature extraction, mapping, feature representation and finally classification, as it is shown in Fig.\,\ref{fig:ML-scheme}.
+% \added[id=mojh]{
+%   All the previously mentioned methods follow a similar pipeline or framework, which consists of different steps.
+%   We categorized these steps as pre-processing, feature extraction, mapping, feature representation and finally classification, as it is shown in Fig.\,\ref{fig:ML-scheme}.
 
-  Pre-processing of \gls{oct} volumes, as noted in Sect.\,\ref{sec:review}, consists of denoising, flattening the retinal curvature, aligning the B-scans through the whole volume and finally cropping or resizing the volumes.
-  Feature extraction refers to extraction of different textural and shape information from the B-scan or the volumes.
-  Mapping step is used to determine a discrete set of elements (structures) representing a sample (i.e.B-scan/volume).
-  In this step either one structure is used per sample namely global-mapping or the features are extracted with reference to a set of structures, i.e.dense or sparse patches through the sample, local-mapping.
+%   Pre-processing of \gls{oct} volumes, as noted in Sect.\,\ref{sec:review}, consists of denoising, flattening the retinal curvature, aligning the B-scans through the whole volume and finally cropping or resizing the volumes.
+%   Feature extraction refers to extraction of different textural and shape information from the B-scan or the volumes.
+%   Mapping step is used to determine a discrete set of elements (structures) representing a sample (i.e.B-scan/volume).
+%   In this step either one structure is used per sample namely global-mapping or the features are extracted with reference to a set of structures, i.e.dense or sparse patches through the sample, local-mapping.
 
-  In feature representation step, the representation of the final descriptor prior to classification is decided.
-  The extracted features using different mapping techniques can be represented in lower dimensions (using \gls{pca} for instance), as a concatenated of descriptor, histogram of words (using \gls{bow}) or sparse representation (sparse coding).
-}
+%   In feature representation step, the representation of the final descriptor prior to classification is decided.
+%   The extracted features using different mapping techniques can be represented in lower dimensions (using \gls{pca} for instance), as a concatenated of descriptor, histogram of words (using \gls{bow}) or sparse representation (sparse coding).
+% }
 
 Supervised classification is based on full annotated and labeled training set.
-In such methods the labeled training data is used to train the classifier function and the learned function is used for prediction.
-Semi-supervised classification takes advantage of both unlabeled and labeled data.
-This techniques are particularly useful when there is lack of annotated data moreover it has shown that use of small amount of labeled data in conjunction of unlabeled data can increase the learning accuracy.
+In such methods the labeled training data is used to train the classifier function and the learned function is then used for prediction.
+% Semi-supervised classification takes advantage of both unlabeled and labeled data.
+% This techniques are particularly useful when there is lack of annotated data moreover it has shown that use of small amount of labeled data in conjunction of unlabeled data can increase the learning accuracy.
+%
+Figure~\ref{fig:ML-scheme} describes a prevalent structure for supervised classification.
+The volumes undergo:
+(i) \emph{Pre-processing} to reduce the natural noise of the images and correct acquisition deficiencies;
+(ii) \emph{Feature detection} to quantify visual cues like appearance, texture, shape, etc.
+(iii) \emph{Mapping} to determine the discrete set of elements (structures) to represent the sample to be classified (i.e.B-scan/volume);
+(iv) \emph{Feature extraction} to associate a descriptor for each element from the \emph{mapping-stage} based on the \emph{detected features};
+(v) \emph{Classification}.
 
-The details implementation of the following methods and their integration to our common framework is described in Sect.~\textit{experiments}.
+% The details implementation of the following methods and their integration to our common framework is described in Sect.~\textit{experiments}.
 
 \begin{figure*}
   \centering{
