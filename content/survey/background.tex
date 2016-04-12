@@ -42,14 +42,21 @@ The volumes undergo:
   \label{fig:ML-scheme}
 \end{figure*}
 
-Venhuizen\,\textit{et al.} proposed a method for \gls{oct} images classification using the \gls{bow} models~\cite{Venhuizen2015}.
-The method starts with the detection and selection of keypoints in each individual
-B-scan, by keeping the most salient points corresponding to the top $3 \%$ of the vertical gradient values.
+%%% Venhuizen2015
+%
+% Brief method description (or goal)
+Venhuizen\,\textit{et al.} proposed a method classification method to distinguish between \gls{amd} and normal \gls{sdoct} volumes using \gls{bow} models~\cite{Venhuizen2015}.
+%
+% Method description
+The method detects and selects a set of keypoints at each individual B-scan.
+Essentially, keeping the salient points comprised at the top $3\%$ of the vertical gradient values.
 Then, a texton of size $9 \times 9$ pixels is extracted around each keypoint, and \gls{pca} is applied to reduce the dimension of every texton to get a feature vector of size $9$.
 All extracted feature vectors are used to create a codebook using \textit{k}-means clustering.
 Then, each \gls{oct} volume is represented in terms of this codebook and is characterized as a histogram that captures the codebook occurrences.
 These histograms are used as feature vector to train a \gls{rf} with a maximum of $100$ trees.
-The method was used to classify \gls{oct} volumes between \gls{amd} and normal cases and achieved an \gls{auc} of $0.984$ with a dataset of $384$ \gls{oct} volumes.
+%
+% Reported results
+The method is tested using a publicly available dataset of $384$ \gls{oct} volumes~\cite{VENHUIZEN_DATASET}, achieving an \gls{auc} of $0.984$.
 
 
 Srinivasan\,\textit{et~al.}~\cite{Srinivasan2014} proposed a classification method to distinguish \gls{dme}, \gls{amd} and normal \gls{sdoct} volumes.
