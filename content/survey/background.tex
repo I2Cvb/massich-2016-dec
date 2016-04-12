@@ -64,9 +64,10 @@ The method is tested using a publicly available dataset of $384$ \gls{oct} volum
 Srinivasan\,\textit{et~al.}~\cite{Srinivasan2014} proposed a classification method to distinguish \gls{dme}, \gls{amd} and normal \gls{sdoct} volumes.
 %
 % Method description
-The \gls{oct} images are pre-processed by reducing the speckle noise by enhancing the sparsity in a transform-domain and flattening the retinal curvature to reduce the inter-patient variations.
-Then, \gls{hog} are extracted for each slice of a volume and a linear \gls{svm} is used for classification.
-\todo{what about the mapping etc.}
+The \gls{oct} images pre-processed by first enhancing sparsity in a transform-domain (BM3D~\cite{dabov2007image}), to reduce their speckle noise, and then by flattening the retinal curvature to reduce the inter-patient variations.
+\gls{hog} features are then extracted from multi-resolution pyramid of each pre-processed slice of a volume.
+These features are classified using a linear \gls{svm}.
+Note that the method classifies each individual B-scan into one of three categories, i.e.\gls{dme}, \gls{amd}, and normal, and then classifies a volume based on the number of B-scans in each category.
 %
 % Reported results
 The method is also tested using a publicly available of $45$ patients equally subdivided into the three aforementioned classes, this method leads to a correct classification rate of $100 \%$, $100 \%$ and $86.67 \%$ for normal, \gls{dme} and \gls{amd} patients, respectively.
