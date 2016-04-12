@@ -1,29 +1,66 @@
-\begin{table*}
-\caption{Summary of the state-of-the-art methods.}
-\resizebox{1.05\linewidth}{!}{
-\scriptsize{
-\begin{tabular}{l ccc c cccc	c c c c	c c}
+\begin{table}
+\caption{Summary of the stat-of-the-art methods based on our common framework, the dashed line separates the supervised and semi-supervised methods.}
+\resizebox{1\linewidth}{!}{
+\footnotesize{
+\begin{tabular}{l c	c c c c }
 \toprule
-Ref & \multicolumn{3}{c}{Diseases} & Data  & \multicolumn{4}{c}{Pre-processing} & Features & Representation & Classifier & Evaluation & Results\\
-    &  &  &  & size &  &  &  &  &  &  &  & & &\\
-   \cmidrule(l){2-4}\cmidrule(l){6-9} 
-    & \gls{amd} & \gls{dme} & Normal  &           & De-noise & Flatten & Aligning & Cropping &   & &   &  &   \\
+\multicolumn{1}{c}{Ref} & Pre-processing & Features &  Mapping &  Representation & Classification\\
+    &  &  &  &  & \\
 \midrule
-& & & & & & & & & & & & & &  \\
-%Srinivansan\,\textit{et al.}~
-\cite{Srinivasan2014} & $\checkmark$ & $\checkmark$ & $\checkmark$ &  45 & $\checkmark$ & $\checkmark$ &  & $\checkmark$ & \gls{hog} &  & linear-\gls{svm} & \gls{acc} & 86.7\%,100\%,100\%  \\
-& & & & & & & & & & & & &    \\
+	&  &  &  &  & \\
 %Venhuizen\,\textit{et al.}~
-\cite{Venhuizen2015} & $\checkmark$ &  & $\checkmark$ & 384 &  & & & &  Texton  &\gls{bow}, \gls{pca}  & \gls{rf} & \gls{auc} & 0.984 \\ 
-& & & & & & & & & & & & &   & \\
-%Liu\,\textit{et al.}~
-\cite{Liu2011} & $\checkmark$ & $\checkmark$ & $\checkmark$  & 326 &  & $\checkmark$ & $\checkmark$ &  &  Edge, \gls{lbp} & \gls{pca}& \gls{svm}-\gls{rbf} &\gls{auc} & 0.93 \\
-& & & & & & & & & & & & & \\
+Venhuizen \textit{et al.}~\cite{Venhuizen2015} &  & Texton & Local   &\gls{bow}, \gls{pca}  & \gls{rf} \\
+	&  &  &  &  & \\
+%Srinivansan\,\textit{et al.}~
+\multirow{3}{*}{Srinivasan \textit{et al.}~\cite{Srinivasan2014}} & De-noise & \multirow{3}{*}{\gls{hog}} & \multirow{3}{*}{Global} & &  \multirow{3}{*}{linear-\gls{svm}} \\
+ & Flatten & & & & \\
+ & Cropped & & & & \\
+	&  &  &  &  & \\
 %Lema\^itre\,\textit{et al.}~
-\cite{Lemaintre2015miccaiOCT} &  & $\checkmark$ & $\checkmark$ & 62  & $\checkmark$ &  &  &  & \gls{lbp}-\gls{lbptop} & \gls{pca}, \gls{bow}, histogram&  \gls{rf} & \gls{se},\gls{sp} & 87.5\%, 75\%  \\
-& & & & & & & & & & & & &  \\
-\bottomrule
-\end{tabular}}}
-\label{tab:survey-tab}
-\end{table*}
+Lemaitre \textit{et al.}~\cite{Lemaintre2015miccaiOCT} & De-noised & \gls{lbp} & Local &  \gls{pca}, &  \gls{rf} \\
+& & \gls{lbptop} & Global & \gls{bow}, Histogram & \\ 
+	&  &  &  &  & \\
 
+%Liu\,\textit{et al.}~
+\multirow{2}{*}{Liu \textit{et al.}~\cite{Liu2011}} & Flatten & \multirow{2}{*}{Edge, \gls{lbp}} & \multirow{2}{*}{Local} & \multirow{2}{*}{\gls{pca}}& \multirow{2}{*}{\gls{rbf}-\gls{svm}} \\
+& Aligned & & & & \\
+	&  &  &  &  & \\
+%\midrule
+\hdashline \noalign{\vskip 3pt}
+\multirow{3}{*}{Sankar \textit{et al.}~\cite{sankar2016classification}} & De-noised & Pixel & \multirow{3}{*}{Global} & \multirow{3}{*	}{\gls{pca}} & Mahalanobis \\
+ & Flatten &-intensities & & & -distance\\
+ & Cropped & & & & to \gls{gmm}\\ 
+\bottomrule
+\end{tabular}}
+}
+\label{tab:survey-tab}
+\end{table}
+
+%\begin{table*}
+%\caption{Summary of the state-of-the-art methods.}
+%\resizebox{1.05\linewidth}{!}{
+%\scriptsize{
+%\begin{tabular}{l ccc c cccc	c c c c	c c}
+%\toprule
+%Ref & \multicolumn{3}{c}{Diseases} & Data  & \multicolumn{4}{c}{Pre-processing} & Features & Representation & Classifier & Evaluation & Results\\
+%    &  &  &  & size &  &  &  &  &  &  &  & & &\\
+%   \cmidrule(l){2-4}\cmidrule(l){6-9} 
+%    & \gls{amd} & \gls{dme} & Normal  &           & De-noise & Flatten & Aligning & Cropping &   & &   &  &   \\
+%\midrule
+%& & & & & & & & & & & & & &  \\
+%%Srinivansan\,\textit{et al.}~
+%\cite{Srinivasan2014} & $\checkmark$ & $\checkmark$ & $\checkmark$ &  45 & $\checkmark$ & $\checkmark$ &  & $\checkmark$ & \gls{hog} &  & linear-\gls{svm} & \gls{acc} & 86.7\%,100\%,100\%  \\
+%& & & & & & & & & & & & &    \\
+%%Venhuizen\,\textit{et al.}~
+%\cite{Venhuizen2015} & $\checkmark$ &  & $\checkmark$ & 384 &  & & & &  Texton  &\gls{bow}, \gls{pca}  & \gls{rf} & \gls{auc} & 0.984 \\ 
+%& & & & & & & & & & & & &   & \\
+%%Liu\,\textit{et al.}~
+%\cite{Liu2011} & $\checkmark$ & $\checkmark$ & $\checkmark$  & 326 &  & $\checkmark$ & $\checkmark$ &  &  Edge, \gls{lbp} & \gls{pca}& \gls{svm}-\gls{rbf} &\gls{auc} & 0.93 \\
+%& & & & & & & & & & & & & \\
+%%Lema\^itre\,\textit{et al.}~
+%\cite{Lemaintre2015miccaiOCT} &  & $\checkmark$ & $\checkmark$ & 62  & $\checkmark$ &  &  &  & \gls{lbp}-\gls{lbptop} & \gls{pca}, \gls{bow}, histogram&  \gls{rf} & \gls{se},\gls{sp} & 87.5\%, 75\%  \\
+%& & & & & & & & & & & & &  \\
+%\bottomrule
+%\end{tabular}}}
+%\label{tab:survey-tab}
+%\end{table*}

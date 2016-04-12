@@ -28,34 +28,31 @@
 \begin{document}
 \input{content/frontmatter.tex}             % contains the Title and Autor info
 
-% Variables file
-\input{variables.tex}
-
 \maketitle
 
 % Please keep the abstract below 300 words
 \begin{abstract}
-  \added[id=old]{
-    This paper addresses the problem of automatic classification of \gls{sdoct}
-    data for automatic identification of patients with \gls{dme} versus normal
-    subjects.  \gls{oct} has been a valuable diagnostic tool for \gls{dme},
-    which is among the most common causes of irreversible vision loss in
-    individuals with diabetes.  Here, a classification framework with five
-    distinctive steps is proposed and we present an extensive study of each
-    step.  Our method considers combination of various pre-processings in
-    conjunction with \gls{lbp} features and different mapping strategies.
-    Using linear and non-linear classifiers, we tested the developed framework
-    on a balanced cohort of 32 patients.
-  }
-
-  \added[id=old]{
-    Experimental results show that the proposed method outperforms the previous
-    studies by achieving a \gls{se} and \gls{sp} of 81.2\% and 93.7\%,
-    respectively.  Our study concludes that the 3D features and high-level
-    representation of 2D features using patches achieve the best results.  However,
-    the effects of pre-processing is inconsistent with respect to different
-    classifiers and feature configurations.
-  }
+%  \added[id=old]{
+%    This paper addresses the problem of automatic classification of \gls{sdoct}
+%    data for automatic identification of patients with \gls{dme} versus normal
+%    subjects.  \gls{oct} has been a valuable diagnostic tool for \gls{dme},
+%    which is among the most common causes of irreversible vision loss in
+%    individuals with diabetes.  Here, a classification framework with five
+%    distinctive steps is proposed and we present an extensive study of each
+%    step.  Our method considers combination of various pre-processings in
+%    conjunction with \gls{lbp} features and different mapping strategies.
+%    Using linear and non-linear classifiers, we tested the developed framework
+%    on a balanced cohort of 32 patients.
+%  }
+%
+%  \added[id=old]{
+%    Experimental results show that the proposed method outperforms the previous
+%    studies by achieving a \gls{se} and \gls{sp} of 81.2\% and 93.7\%,
+%    respectively.  Our study concludes that the 3D features and high-level
+%    representation of 2D features using patches achieve the best results.  However,
+%    the effects of pre-processing is inconsistent with respect to different
+%    classifiers and feature configurations.
+  
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -66,7 +63,7 @@
 %% Incldue the content without .tex extension
 % \acresetall  % reset the acronyms from the abstract
 \include*{content/intro/intro}          % the file wihtout .tex
-\include*{content/survey/background}
+%\include*{content/survey/background}
 \include*{content/method/dataset}
 \include*{content/method/method}
 \include*{content/results/results}
@@ -89,14 +86,7 @@
 
 % % Imports the bibliography file "sample.bib"
 % \bibliography{sample}
-
-\if\hasBibliography 1
-% Bibliography
 \bibliographystyle{IEEEtran}
-% Bibliography file
 \bibliography{IEEEabrv,content/bib/literature_review,content/bib/medical/medical,content/bib/retinopathy/retinopathy}
-\fi
-
-
 
 \end{document}
