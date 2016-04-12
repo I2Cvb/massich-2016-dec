@@ -101,5 +101,18 @@ Finally a \gls{svm} with an \gls{rbf} kernel is used as classifier.
 % results report
 The method achieved good results in detection \gls{oct} scan containing different pathology such as \gls{dme} or \gls{amd}, with an \gls{auc} of $0.93$ using a dataset of $326$ \gls{oct} scans.
 
+\subsection{Semi-supervised methods}
+An example of semi-supervised approach for \gls{sdoct} classification is recently proposed by Sankar. \textit{et al.}~\cite{sankar2016classification}.
+The proposed method is based on appearance modeling of normal \gls{oct} images using \gls{gmm} and anomaly detection.
+The abnormal B-scans are detected as outliers to the fitted \gls{gmm} and volume classification is performed based on the number of detected outliers in the volume.
+
+%The proposed method is based on modeling the appearance of the normal \gls{oct} images using a \gls{gmm} and detecting abnormal \gls{oct} images as outliers.
+%Use an anomaly detection approach to identify abnormal B-scan as outliers to the \gls{gmm} and finally detect unhealthy \gls{oct} volumes based on the number of abnormal B-scan.
+This approach differs from supervised approaches since the B-scan detection method does not require a labeled training set of B-scans.
+This method starts by pre-processing the B-scans using resizing, flattening and denoising (\gls{nlm} filter).
+The features are extracted by taking the intensity information of each B-scan and applying \gls{pca} to reduce their dimension.
+The feature space is then modeled using \gls{gmm}.
+In the testing stage, for the new B-scan, the features are extracted in a similar way and they are classified as normal or abnormal based on their Mahalanobis distance to the \gls{gmm}.
+Finally the volume classification is performed considering the umber of outliers (abnormal) B-scans per volume.
 
 % \input{content/survey/Survey-Table.tex}
