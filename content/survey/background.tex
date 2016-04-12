@@ -86,13 +86,20 @@ According to different mapping, \gls{lbp} or \gls{lbptop} texture features are e
 The final feature descriptors per volumes are classified using \gls{rf} classifier.
 This methodology was tested against Venhuizen\,\textit{et al.}~\cite{Venhuizen2015} using public and non-public datasets showing an improvement within the results achieving a \gls{se} of 87.5\% and a \gls{sp} of 75\%.
 
-
-Liu\,\textit{et al.} proposed a methodology for detecting macular pathology in \gls{oct} images using \gls{lbp} and gradient information as attributes~\cite{Liu2011}.
+%
+% description
+Liu\,\textit{et al.} proposed a methodology aiming for B-scan classification, rather than volume classification.
+The classification goal is to distinguish between macular pathology and normal \gls{oct} B-scan images using \gls{lbp} and gradient information as attributes~\cite{Liu2011}.
+% 
+% Method description
 The method starts by aligning and flattening the images and creating a $3$-level multi-scale spatial pyramid.
 The edge and \gls{lbp} histograms are then extracted from each block of every level of the pyramid.
 %is created and edge and \gls{lbp} histograms are extracted in each block at every level of the pyramid.
 All the obtained histograms are concatenated into a global descriptor whose dimensions are reduced using \gls{pca}.
 Finally a \gls{svm} with an \gls{rbf} kernel is used as classifier.
+%
+% results report
 The method achieved good results in detection \gls{oct} scan containing different pathology such as \gls{dme} or \gls{amd}, with an \gls{auc} of $0.93$ using a dataset of $326$ \gls{oct} scans.
+
 
 % \input{content/survey/Survey-Table.tex}
