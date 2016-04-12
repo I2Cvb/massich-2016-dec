@@ -28,9 +28,6 @@
 \begin{document}
 \input{content/frontmatter.tex}             % contains the Title and Autor info
 
-% Variables file
-\input{variables.tex}
-
 \maketitle
 
 % Please keep the abstract below 300 words
@@ -89,14 +86,7 @@
 
 % % Imports the bibliography file "sample.bib"
 % \bibliography{sample}
-
-\if\hasBibliography 1
-% Bibliography
 \bibliographystyle{IEEEtran}
-% Bibliography file
 \bibliography{IEEEabrv,content/bib/literature_review,content/bib/medical/medical,content/bib/retinopathy/retinopathy}
-\fi
-
-
 
 \end{document}
