@@ -119,4 +119,7 @@ sympy-plots-for-*.tex/
 # xindy
 *.xdy
 
+*.docx
 
+*~
+*auto/
