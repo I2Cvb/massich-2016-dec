@@ -77,6 +77,14 @@ The method is also tested using a publicly available of $45$ patients equally su
 Replicating the method proposed by Srinivasan \textit{et~al.}~\cite{Srinivasan2014} and adding \gls{pca} to the feature extraction step, as was proposed by Venhuizen \textit{et al.}~\cite{Venhuizen2015}, we also compare the performance of extracted \gls{hog} and \gls{lbp} features (similar to \cite{Srinivasan2014}, features are extracted from multi-resolution pyramid) for classification of B-scans, and accordingly volumes.
 {\color{red}This work was submitted for publication to a recent conference.}
 
+Lemaitre~\emph{et~al.}~\cite{Lemaintre2015miccaiOCT} propose a metho based on \gls{lbp} features to describe the texture of \gls{oct} images and dictionary learning using the \gls{bow} models~\cite{Sivic2003}.
+Note that using \gls{bow} and dictionary learning contrary to \cite{Srinivasan2014} the classification is performed per volume, rather than B-scan.
+In this method the \gls{oct} images are first pre-processed using \gls{nlm} filtering, to reduce the speckle noise.
+%The data is pre-processed using \gls{nlm} filtering.
+Then the volumes are mapped into discrete set of structures namely: local, when these structures correspond to patches; or global, when they correspond to volume slices or the whole volume.
+According to different mapping, \gls{lbp} or \gls{lbptop} texture features are extracted and represented (per volume) using histogram, \gls{pca} or \gls{bow}.
+The final feature descriptors per volumes are classified using \gls{rf} classifier.
+This methodology was tested against Venhuizen\,\textit{et al.}~\cite{Venhuizen2015} using public and non-public datasets showing an improvement within the results achieving a \gls{se} of 87.5\% and a \gls{sp} of 75\%.
 
 
 Liu\,\textit{et al.} proposed a methodology for detecting macular pathology in \gls{oct} images using \gls{lbp} and gradient information as attributes~\cite{Liu2011}.
@@ -86,14 +94,5 @@ The edge and \gls{lbp} histograms are then extracted from each block of every le
 All the obtained histograms are concatenated into a global descriptor whose dimensions are reduced using \gls{pca}.
 Finally a \gls{svm} with an \gls{rbf} kernel is used as classifier.
 The method achieved good results in detection \gls{oct} scan containing different pathology such as \gls{dme} or \gls{amd}, with an \gls{auc} of $0.93$ using a dataset of $326$ \gls{oct} scans.
-
-
-The proposed method by Lemaitre~\emph{et~al.}~\cite{Lemaintre2015miccaiOCT} is based on \gls{lbp} features to describe the texture of \gls{oct} images and dictionary learning using the \gls{bow} models~\cite{Sivic2003}.
-Our later study proposes a standard classification procedure to differentiate between \gls{dme} and normal \gls{sdoct} volumes~\cite{Lemaitre2015}The data is pre-processed using \gls{nlm} filtering.
-The volumes are mapped into discrete set of structures namely: local, when these structures correspond to patches; or global, when the structures correspond to volume slices or the whole volume.
-These structures are described in terms of texture using \gls{lbp} or \gls{lbptop} and encoded using histogram, \gls{pca} or \gls{bow} to produce a single feature vector in order to present the volumes to a \gls{rf} classifeir.
-This methodology was tested against Venhuizen\,\textit{et al.}~\cite{Venhuizen2015} using public and non-public datasets showing an improvement within the results achieving a \gls{se} of 87.5\% and a \gls{sp} of 75\%.
-
-
 
 % \input{content/survey/Survey-Table.tex}
