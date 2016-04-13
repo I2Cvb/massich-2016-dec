@@ -8,6 +8,13 @@ Where the most relevant works in Sect.\,\ref{sec:review} are formulated as the a
 
 \input{content/method/Survey-Table.tex}
 
+\subsection{Implementation details}\label{sec:exp:implementation}
+For reproductivity purposes, the experimentation described in this work can be found in \cite{EXPERIMENT_REPO},
+where the image processing and \gls{ml} rapid pipeline prototyping library \emph{Protoclass}~\cite{PROTOCLASS_REPO} has been used to implement the methodologies in Tab.\,\ref{tab:survey-tab} in accordance to proposed experimentation framework.
+Each methodology implementation can be seen as a plug-in to experiment in \cite{EXPERIMENT_REPO}, while references to stand-alone implementation of these methodologies can be found in Tab.\,\ref{tab:survey-tab}.
+All the repositories are publicly available and provided with tests to ensure that our implementation agrees with the results reported by the original works.
+\footnote{Note that methodologies where this quality control could not had been enforced have been discarded for experimentation and only reviewed based on the results reported by the original work and compiled in Sect.\,\ref{sed:review}.}
+
 \subsection{Evaluation}\label{sec:exp:evaluation}
 All the experiments are evaluated in terms of \gls{se} and \gls{sp} (see Eq.\,\ref{eq:sesp}) using the \gls{lopocv} strategy, in line with \cite{Lemaintre2015miccaiOCT}.
 The \gls{se} evaluates the performance of the classifier with respect to the positive class, while the \gls{sp} evaluates its performance with respect to negative class.
