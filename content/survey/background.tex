@@ -45,7 +45,7 @@ The volumes undergo:
 %%% Venhuizen2015
 %
 % Brief method description (or goal)
-Venhuizen\,\textit{et al.} proposed a method classification method to distinguish between \gls{amd} and normal \gls{sdoct} volumes using \gls{bow} models~\cite{Venhuizen2015}.
+Venhuizen\,\textit{et al.} proposed a classification method to distinguish between \gls{amd} and normal \gls{sdoct} volumes using \gls{bow} models~\cite{Venhuizen2015}.
 %
 % Method description
 The method detects and selects a set of keypoints at each individual B-scan.
@@ -64,7 +64,7 @@ The method is tested using a publicly available dataset of $384$ \gls{oct} volum
 Srinivasan\,\textit{et~al.}~\cite{Srinivasan2014} proposed a classification method to distinguish \gls{dme}, \gls{amd} and normal \gls{sdoct} volumes.
 %
 % Method description
-The \gls{oct} images pre-processed by first enhancing sparsity in a transform-domain (BM3D~\cite{dabov2007image}), to reduce their speckle noise, and then by flattening the retinal curvature to reduce the inter-patient variations.
+The \gls{oct} images are pre-processed by first enhancing sparsity in a transform-domain (BM3D~\cite{dabov2007image}), to reduce their speckle noise, and then by flattening the retinal curvature to reduce the inter-patient variations.
 \gls{hog} features are then extracted from multi-resolution pyramid of each pre-processed slice of a volume.
 These features are classified using a linear \gls{svm}.
 Note that the method classifies each individual B-scan into one of three categories, i.e.\gls{dme}, \gls{amd}, and normal, and then classifies a volume based on the number of B-scans in each category.
@@ -77,7 +77,7 @@ The method is also tested using a publicly available of $45$ patients equally su
 Replicating the method proposed by Srinivasan \textit{et~al.}~\cite{Srinivasan2014} and adding \gls{pca} to the feature extraction step, as was proposed by Venhuizen \textit{et al.}~\cite{Venhuizen2015}, we also compare the performance of extracted \gls{hog} and \gls{lbp} features (similar to \cite{Srinivasan2014}, features are extracted from multi-resolution pyramid) for classification of B-scans, and accordingly volumes.
 {\color{red}This work was submitted for publication to a recent conference.}
 
-Lemaitre~\emph{et~al.}~\cite{Lemaintre2015miccaiOCT} propose a metho based on \gls{lbp} features to describe the texture of \gls{oct} images and dictionary learning using the \gls{bow} models~\cite{Sivic2003}.
+Lemaitre~\emph{et~al.}~\cite{Lemaintre2015miccaiOCT} proposed a method based on \gls{lbp} features to describe the texture of \gls{oct} images and dictionary learning using the \gls{bow} models~\cite{Sivic2003}.
 Note that using \gls{bow} and dictionary learning contrary to \cite{Srinivasan2014} the classification is performed per volume, rather than B-scan.
 In this method the \gls{oct} images are first pre-processed using \gls{nlm} filtering, to reduce the speckle noise.
 %The data is pre-processed using \gls{nlm} filtering.
@@ -100,6 +100,32 @@ Finally a \gls{svm} with an \gls{rbf} kernel is used as classifier.
 %
 % results report
 The method achieved good results in detection \gls{oct} scan containing different pathology such as \gls{dme} or \gls{amd}, with an \gls{auc} of $0.93$ using a dataset of $326$ \gls{oct} scans.
+
+%Albarrak paper 
+% description 
+Albarrak\,\textit{et al.}~\cite{albarrak2013age} proposed another volumetric classification framework for differentiating \gls{amd} and normal volumes.
+%
+% Method description
+The author proposed to flatten the \gls{voi} from each \gls{oct} volume as a pre-processing step and extract \gls{lbptop} and \gls{hog}+\gls{lbptop} features from individual sub-volumes within each \gls{voi}. 
+The extracted features were concatenated into a single feature vector per \gls{oct} volume and presented in lower dimensions using \gls{pca}.
+Finally a Bayesian network classifier was used for classifying the volumes.
+%
+%results
+Testing their proposed method and comparing with \cite{Liu2011} using 140 \gls{oct} volumes, they achieved the highest \gls{se} and \gls{sp} of 92.4\% and 90.5\%, respectively.
+
+% Anantrairichai paper
+% description
+Another supervised method for detection of glaucoma in \gls{oct} images was proposed by Anantrasirichai\,\textit{et al.}~\cite{anantrasirichai2013svm}. 
+% 
+%Method description 
+In this method the authors proposed to use textural features such as \gls{lbp}, \gls{glcm}, wavelet, granulometry, run length measures, and intensity level distributions in combination with retinal layer thickness without any pre-processing.
+Using \gls{pca} and linear and kernel-\gls{svm} classifier, the authors compared the performance of individual features and their combinations. 
+% 
+% results
+Testing with rather a small dataset of 24 \gls{oct} voluems, their proposed method achieved an \gls{acc} of 81.95\% while using layer thickness information.
+ 
+
+ 
 
 \subsection{Semi-supervised methods}
 An example of semi-supervised approach for \gls{sdoct} classification is recently proposed by Sankar. \textit{et al.}~\cite{sankar2016classification}.
