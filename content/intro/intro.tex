@@ -4,63 +4,25 @@
 \section{Introduction}
 \label{sec:intro}  % \label{} allows reference to this section
 
-    Eye diseases such as \gls{dr} and \gls{dme} are the most common causes of
-    irreversible vision loss in individuals with diabetes.  Just in United States
-    alone, health care and associated costs related to eye diseases are estimated
-    at almost \SI{500}[\$]{M}~\cite{Sharma2005}.  Moreover, the prevalent cases of
-    \gls{dr} are expected to grow exponentially affecting over \SI{300}{M} people
-    worldwide by 2025~\cite{Wild2004}.  Given this scenario, early detection and
-    treatment of \gls{dr} and \gls{dme} play a major role to prevent adverse
-    effects such as blindness.  \gls{dme} is characterized as an increase in
-    retinal thickness within 1 disk diameter of the fovea center with or without
-    hard exudates and sometimes associated with cysts~\cite{ETDRSG1985}.  Fundus
-    images which have proven to be very useful in revealing most of the eye
-    pathologies~\cite{Mookiah20132136,Trucco2013} are not as good as \gls{oct}
-    images which provide information about cross-sectional retinal
-    morphology~\cite{Wang2015} (see Sect.\,\ref{sed:data} for some image examples).
-    Therefore the growing interest in developing methodologies for \gls{oct} data.
-    In this sense, great effort has been placed in retinal layers segmentation,
-    which is a necessary step for retinal thickness measurements~\cite{Chiu2010,Kafieh2013}.
-    However, few have addressed the specific problem of \gls{dme} and its associated features detection from \gls{oct} images.
+    Eye diseases such as \gls{dr} and \gls{dme} are the most common causes of irreversible vision loss in individuals with diabetes.
+ Just in United States alone, health care and associated costs related to eye diseases are estimated at almost \SI{500}[\$]{M}~\cite{Sharma2005}.
+ Moreover, the prevalent cases of \gls{dr} are expected to grow exponentially affecting over \SI{300}{M} people worldwide by 2025~\cite{Wild2004}.
+ Given this scenario, early detection and treatment of \gls{dr} and \gls{dme} play a major role to prevent adverse effects such as blindness.
+ \gls{dme} is characterized as an increase in retinal thickness within 1 disk diameter of the fovea center with or without hard exudates and sometimes associated with cysts~\cite{ETDRSG1985}.
+ Fundus images which have proven to be very useful in revealing most of the eye pathologies~\cite{Mookiah20132136,Trucco2013} are not as good as \gls{oct} images which provide information about cross-sectional retinal morphology~\cite{Wang2015} (see Sect.\,\ref{sed:data} for some image examples).
+ Therefore the growing interest in developing methodologies for \gls{oct} data.
+ In this sense, great effort has been placed in retinal layers segmentation,
+ which is a necessary step for retinal thickness measurements~\cite{Chiu2010,Kafieh2013}.
 
-  %Indeed, the new generation of \gls{oct} imaging, namely \gls{sdoct} offers high resolution and fast image acquisition, producing from $27,000$ to $40,000$ A-scans/second with an axial resolution ranging from \SIrange{3.5}{6}{\micro \metre}~\cite{Chen2005}.
-% \begin{figure}
-%   \begin{center}
-%     \hspace*{\fill}
-%       \subfigure[Normal]{\includegraphics[scale=0.15]{normal_case}}\hfill
-%       \subfigure[\gls{dme}-cyst]{\includegraphics[scale=0.15]{dme_cyst}}\hfill
-%       \subfigure[\gls{dme}-exudate]{\includegraphics[scale=0.15]{dme_exudate}}
-%       \hspace*{\fill}
-%   \end{center}
-%   \caption{ Example of \gls{sdoct} images for normal (a) and \gls{dme} patients (b)-(c) with cyst and exudate, respectively.}
-%   \label{fig:dme-normal}
-% \end{figure}
+ However, few studies have addressed the specific problem of \gls{dme} automatic detection in \gls{oct}, revealing large ground to be covered in terms of: (i) manipulating \gls{oct} volumes, (ii) finding radiomix pathology signs, or (iii) appropriated classification strategies.
 
-  \added[id=old]{
-    Many of the previous works on \gls{oct} image analysis have focused on the problem of retinal layers segmentation, which is a necessary step for retinal thickness measurements~\cite{Chiu2010,Kafieh2013}.
-    However, few have addressed the specific problem of \gls{dme} and its associated features detection from \gls{oct} images.
-    Figure\,\ref{fig:dme-normal} shows one normal B-scan and two abnormal B-scans.
-  }
+ Advances in any of those regards is of great interest since (i) manual evaluation of \gls{sdoct} volumetric scans is expensive and time consuming~\cite{Venhuizen2015}.
+ (ii) \gls{sdoct} acquisition has some deficiencies due to eye movement during the scan~\cite{Liu2011}, the reflectivity nature of the retina~\cite{sehuman2014}, the fact that \gls{oct} suffers from high levels of noise and the overall image quality is inconsistent~\cite{barnum}.
+ (iii) Coexistence of multiple pathologies~\cite{Liu2011}, easy to miss pathology signs~\cite{Venhuizen2015}, or large variability within the pathology treats which difficult to obtain proper radiomix to facilitate the task of classification.
 
-
-  Evaluation of the volumetric scan is time consuming, expensive
-  and some pathology signs are easy to miss~\cite{Venhuizen2015}
-
-  \deleted[id=sik]{
-  $\cdot$ coexistence of multiple pathologies~\cite{Liu2011}
-  $\cdot$ OCT image acquisition has drift~\cite{Liu2011}
-  $\cdot$ variability in shape, size and magnitude within the same pathology~\cite{Liu2011}
-  $\cdot$ retina reflectivity (schuman 2014)~\cite{Liu2011}
-  $\cdot$ inconsistent image quality (barnum 2008)~\cite{Liu2011}
-  }
-
-  \deleted[id=sik]{
-    This article is structured as follows: Background(Sect.\,\ref{sec:review}) offers a general idea of the methods reviwed.
-    Materials and methods discusses data and mapping of the methodologies to our framework.
-    Results offers (Sect.\,\ref{sec:results}) (a) individual results of each methodology, as well as our strategy followed to validate that our implementation complies with the results reported by the original work
-    (b) comparative results of the best methodlogy configurations to drive our discussion.
-    Discussion(Sect.\,\ref{sec:discussion}). Conclusion and Further work(Sect.\,\ref{sec:conclusion}).
-  }
+ The rest of this article is structured as follows: Section~\ref{sec:review} offers a general idea of the literature state-of-the-art in \gls{sdoct} volume classification. Section~\ref{sec:data} reviews some publicly available datasets and states the need for another one that suits the classification task here described.
+ Section~\ref{sec:exp} proposes an experimental benchmark to compare different methodologies presented in Sect.\,\ref{sed:review}.
+ Section~\ref{sec:results} reports and discusses the obtained results, while Sect.\,\ref{sec:conclusion} wraps up our thoughts regarding this work and its possible direction.
 
 % Some stuff that emac's colegues use
 %%% Local Variables:
