@@ -46,7 +46,7 @@ This descriptor packages the visual cues associated to the sample.
 %%% Venhuizen2015
 %
 % Brief method description (or goal)
-Venhuizen\,\textit{et al.} propose a classification method to distinguish between \gls{amd} and normal \gls{sdoct} volumes using \gls{bow} models~\cite{Venhuizen2015}.
+Venhuizen\,\textit{et\,al.} propose a classification method to distinguish between \gls{amd} and normal \gls{sdoct} volumes using \gls{bow} models~\cite{Venhuizen2015}.
 %
 % Method description
 The method detects and selects a set of keypoints at each individual B-scan.
@@ -77,7 +77,7 @@ The method achieves a correct classification rate of $100 \%$, $100 \%$ and $86.
 
 Alsaih\,\emph{et\,al.}~\cite{Alsaih2016apr-repoICPR} extended Srinivasan \textit{et~al.}~\cite{Srinivasan2014} by
 (i) incorporating \gls{lbp} to the feature detection stage;
-and (ii) adding \gls{pca} to the feature representation step, as proposed by Venhuizen \textit{et al.}~\cite{Venhuizen2015};
+and (ii) adding \gls{pca} to the feature representation step, as proposed by Venhuizen \textit{et\,al.}~\cite{Venhuizen2015};
 
 Lemaitre~\emph{et~al.}~\cite{Lemaintre2015miccaiOCT} propose a method based on \gls{lbp} features to describe the texture of \gls{oct} images and dictionary learning using the \gls{bow} models~\cite{Sivic2003}.
 Note that using \gls{bow} and dictionary learning contrary to \cite{Srinivasan2014} the classification is performed per volume, rather than B-scan.
@@ -86,11 +86,11 @@ In this method the \gls{oct} images are first pre-processed using \gls{nlm} filt
 Then the volumes are mapped into discrete set of structures namely: local, when these structures correspond to patches; or global, when they correspond to volume slices or the whole volume.
 According to different mapping, \gls{lbp} or \gls{lbptop} texture features are extracted and represented (per volume) using histogram, \gls{pca} or \gls{bow}.
 The final feature descriptors per volumes are classified using \gls{rf} classifier.
-This methodology was tested against Venhuizen\,\textit{et al.}~\cite{Venhuizen2015} using public and non-public datasets showing an improvement within the results by achieving a \gls{se} of 87.5\% and a \gls{sp} of 75\%.
+This methodology was tested against Venhuizen\,\textit{et\,al.}~\cite{Venhuizen2015} using public and non-public datasets showing an improvement within the results by achieving a \gls{se} of 87.5\% and a \gls{sp} of 75\%.
 
 %
 % description
-Liu\,\textit{et al.} propose a methodology aiming for B-scan classification, rather than volume classification.
+Liu\,\textit{et\,al.} propose a methodology aiming for B-scan classification, rather than volume classification.
 The classification goal is to distinguish between macular pathology and normal \gls{oct} B-scan images using \gls{lbp} and gradient information as attributes~\cite{Liu2011}.
 %
 % Method description
@@ -105,7 +105,7 @@ The method achieved good results in detection of \gls{oct} scan containing diffe
 
 %Albarrak paper
 % description
-Albarrak\,\textit{et al.}~\cite{albarrak2013age} propose another volumetric classification framework for differentiating \gls{amd} and normal volumes.
+Albarrak\,\textit{et\,al.}~\cite{albarrak2013age} propose another volumetric classification framework for differentiating \gls{amd} and normal volumes.
 %
 % Method description
 The author propose to flatten the \gls{voi} from each \gls{oct} volume as a pre-processing step and extract \gls{lbptop} and \gls{hog}+\gls{lbptop} features from individual sub-volumes within each \gls{voi}.
@@ -117,7 +117,7 @@ Testing their proposed method and comparing with \cite{Liu2011} using 140 \gls{o
 
 % Anantrairichai paper
 % description
-Anantrasirichai\,\textit{et al.}~\cite{anantrasirichai2013svm} propose to detect glaucoma in \gls{oct} images based on a variety of texture measures.
+Anantrasirichai\,\textit{et\,al.}~\cite{anantrasirichai2013svm} propose to detect glaucoma in \gls{oct} images based on a variety of texture measures.
 %
 %Method description
 The images are described in terms of \gls{lbp}, \gls{glcm}, wavelet, granulometry, run length measures, and intensity level distributions in combination with retinal layer thickness without any pre-processing.
@@ -128,17 +128,21 @@ Testing with rather a small dataset of 24 \gls{oct} voluems, their proposed meth
 
 
 \subsection{Semi-supervised methods}
-An example of semi-supervised approach for \gls{sdoct} classification is recently proposed by Sankar. \textit{et al.}~\cite{sankar2016classification}.
-The proposed method is based on appearance modeling of normal \gls{oct} images using \gls{gmm} and anomaly detection.
-The abnormal B-scans are detected as outliers to the fitted \gls{gmm} and volume classification is performed based on the number of detected outliers in the volume.
+Sankar\,\textit{et\,al.}~\cite{sankar2016classification} propose to use a semi-supervised strategy to classify \gls{dme}\,\emph{vs.\,normal} \gls{oct} volumes.
+The main differences between this method and the afore stated methodologies, with the fully supervised methodologies pipeline, are
+(i) only \emph{normal} volumes are needed to train the system;
+and (ii) the training volumes are not used for building the classification function.
+The proposed method is based on appearance modeling of normal \gls{oct} images using \gls{gmm} and consider a \gls{dme} any volume containing two consecutive B-scans not following such model.
 
-%The proposed method is based on modeling the appearance of the normal \gls{oct} images using a \gls{gmm} and detecting abnormal \gls{oct} images as outliers.
-%Use an anomaly detection approach to identify abnormal B-scan as outliers to the \gls{gmm} and finally detect unhealthy \gls{oct} volumes based on the number of abnormal B-scan.
-This approach differs from supervised approaches since the B-scan detection method does not require a labeled training set of B-scans.
-This method starts by pre-processing the B-scans using resizing, flattening and denoising (\gls{nlm} filter).
-The features are extracted by taking the intensity information of each B-scan and applying \gls{pca} to reduce their dimension.
-The feature space is then modeled using \gls{gmm}.
-In the testing stage, for the new B-scan, the features are extracted in a similar way and they are classified as normal or abnormal based on their Mahalanobis distance to the \gls{gmm}.
-Finally the volume classification is performed considering the umber of outliers (abnormal) B-scans per volume.
+During the training stage, volumes only undertake the first two steps of the schema presented in Fig.\,\ref{fig:ML-scheme}.
+The volumes are pre-processed using: \gls{nlm} denoising, flattening and resizing of the B-scans to ensure homogeneous dimension across all volumes.
+Finally, an appearance model to be used for feature detection at testing stage is created as follows:
+(i) intensity values of each B-scans for all \emph{normal} volumes within the training set are projected into a lower space using \gls{pca}.
+(ii) \gls{gmm} to describe the resulting space is created.
 
-% \input{content/survey/Survey-Table.tex}
+During the testing stage, the testing volume is pre-processed in the same manner than during training.
+The detected feature for each B-scan corresponds to whether the B-scan follows or not the \gls{gmm} learned during the training stage.
+To do so, the B-scan is projected to the same lower space and then compared to the learned \gls{gmm} using the Mahalanobis distance.
+The mapping is global and the feature representation corresponds to the concatenation of the outlier detection used as feature detection.
+The final decision is hard-coded and based on the number of outliers (abnormal) B-scans per volume.
+
