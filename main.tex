@@ -32,27 +32,33 @@
 
 % Please keep the abstract below 300 words
 \begin{abstract}
-  \added[id=old]{
-    This paper addresses the problem of automatic classification of \gls{sdoct}
-    data for automatic identification of patients with \gls{dme} versus normal
-    subjects.  \gls{oct} has been a valuable diagnostic tool for \gls{dme},
-    which is among the most common causes of irreversible vision loss in
-    individuals with diabetes.  Here, a classification framework with five
-    distinctive steps is proposed and we present an extensive study of each
-    step.  Our method considers combination of various pre-processings in
-    conjunction with \gls{lbp} features and different mapping strategies.
-    Using linear and non-linear classifiers, we tested the developed framework
-    on a balanced cohort of 32 patients.
-  }
+This article reviews the current state of automatically classify \gls{sdoct} data to identify \gls{dme} versus normal subjects.
+Addressing this classification problem has valuable interest since early detection and treatment of \gls{dme} play a major role to prevent eye adverse effects such as blindness.
 
-  \added[id=old]{
-    Experimental results show that the proposed method outperforms the previous
-    studies by achieving a \gls{se} and \gls{sp} of 81.2\% and 93.7\%,
-    respectively.  Our study concludes that the 3D features and high-level
-    representation of 2D features using patches achieve the best results.  However,
-    the effects of pre-processing is inconsistent with respect to different
-    classifiers and feature configurations.
-  }
+Despite previous works addressing this problem, this article points out the lack of publicly available data and benchmarking suited for this particular task of identify \gls{dme} \emph{vs.\,normal} \gls{sdoct} volumes.
+The main contribution of this article is to cover these deficiencies by providing a common benchmark, dataset, and a collection of our own implementation of the most relevant methodologies found in the literature.
+
+%   \added[id=old]{
+%     This paper addresses the problem of automatic classification of \gls{sdoct}
+%     data for automatic identification of patients with \gls{dme} versus normal
+%     subjects.  \gls{oct} has been a valuable diagnostic tool for \gls{dme},
+%     which is among the most common causes of irreversible vision loss in
+%     individuals with diabetes.  Here, a classification framework with five
+%     distinctive steps is proposed and we present an extensive study of each
+%     step.  Our method considers combination of various pre-processings in
+%     conjunction with \gls{lbp} features and different mapping strategies.
+%     Using linear and non-linear classifiers, we tested the developed framework
+%     on a balanced cohort of 32 patients.
+%   }
+
+%   \added[id=old]{
+%     Experimental results show that the proposed method outperforms the previous
+%     studies by achieving a \gls{se} and \gls{sp} of 81.2\% and 93.7\%,
+%     respectively.  Our study concludes that the 3D features and high-level
+%     representation of 2D features using patches achieve the best results.  However,
+%     the effects of pre-processing is inconsistent with respect to different
+%     classifiers and feature configurations.
+%   }
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -65,10 +71,17 @@
 \include*{content/intro/intro}          % the file wihtout .tex
 \include*{content/survey/background}
 \include*{content/method/dataset}
+\input{./content/results/table_summary}
 \include*{content/method/method}
 \include*{content/results/results}
-\section{Discussion}\label{sec:discussion}
+% \section{Discussion}\label{sec:discussion}
 \section{Conclusion and Further work}\label{sec:conclusion}
+The work here presented states the relevance of developing methodologies to automatically differentiate \gls{dme} \emph{vs. normal} \gls{sdoct} scans.
+This article offers an overview of the state-of-the-art methodologies and provides a public benchmarking to facilitate further studies.
+In this regard, there are two crucial aspects to improve the work here presented:
+(i) enlarge the dataset.
+(ii) reach out for the original authors of those methods in Sect.\,\ref{sec:review} that could not be included in Sect.\,\ref{sec:exp} because our implementation could not be tested against the original data or we did not achieve the original results.
+
 \nolinenumbers
 
 %\section*{References}
@@ -87,6 +100,6 @@
 % % Imports the bibliography file "sample.bib"
 % \bibliography{sample}
 \bibliographystyle{IEEEtran}
-\bibliography{IEEEabrv,content/bib/literature_review,content/bib/medical/medical,content/bib/retinopathy/retinopathy}
+\bibliography{content/bib/literature_review,content/bib/medical/medical,content/bib/retinopathy/retinopathy}
 
 \end{document}
