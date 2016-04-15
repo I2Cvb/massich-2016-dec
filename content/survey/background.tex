@@ -138,7 +138,7 @@ During the training stage, volumes only undertake the first two steps of the sch
 The volumes are pre-processed using: \gls{nlm} denoising, flattening and resizing of the B-scans to ensure homogeneous dimension across all volumes.
 Finally, an appearance model to be used for feature detection at testing stage is created as follows:
 (i) intensity values of each B-scans for all \emph{normal} volumes within the training set are projected into a lower space using \gls{pca}.
-(ii) \gls{gmm} to describe the resulting space is created.
+(ii) \gls{gmm} to describe the resulting space.
 
 During the testing stage, the testing volume is pre-processed in the same manner than during training.
 The detected feature for each B-scan corresponds to whether the B-scan follows or not the \gls{gmm} learned during the training stage.
