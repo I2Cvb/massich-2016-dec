@@ -128,8 +128,9 @@ Testing with rather a small dataset of 24 \gls{oct} voluems, their proposed meth
 
 \subsection{Semi-supervised methods}
 
-Sankar~\textit{et~al.} propose to use a semi-supervised strategy to classify \gls{dme} \emph{vs.} normal \gls{oct} volumes~\cite{sankar2016classification}.
+Sankar~\textit{et~al.} propose to use a semi-supervised strategy to classify \gls{dme} \emph{vs.} normal \gls{oct} volumes based on appearance modeling of normal \gls{oct} images using \gls{gmm}~\cite{sankar2016classification}.
 The main difference between this method and the supervised methodologies lies in the fact that only normal volumes are used to train the system.
+
 For each \gls{oct} volume, the B-scans are denoised using \gls{nlm} filtering, flattened, and resized to ensure homogeneous dimension across all volumes.
 Each B-scan is vectorized and projected into a lower-dimensional space using \gls{pca}.
 Subsequently, normal B-scans are modelled using a \gls{gmm} in which the number of Gaussian $K$ is determined on a validation set.
