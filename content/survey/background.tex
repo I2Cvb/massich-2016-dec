@@ -126,23 +126,13 @@ Using \gls{pca} and linear and kernel-\gls{svm} classifier, the authors compared
 % results
 Testing with rather a small dataset of 24 \gls{oct} voluems, their proposed method achieved an \gls{acc} of 81.95\% while using layer thickness information.
 
-
 \subsection{Semi-supervised methods}
-Sankar\,\textit{et\,al.}~\cite{sankar2016classification} propose to use a semi-supervised strategy to classify \gls{dme}\,\emph{vs.\,normal} \gls{oct} volumes.
-The main differences between this method and the aforesaid methodologies (supervised methodologies) are
-(i) only \emph{normal} volumes are needed to train the system;
-and (ii) the training volumes are not used for building the classification function.
-The proposed method is based on appearance modeling of normal \gls{oct} images using \gls{gmm} and consider a \gls{dme} any volume containing two consecutive B-scans not following such model.
 
-During the training stage, volumes only undertake the first two steps of the schema presented in Fig.\,\ref{fig:ML-scheme}.
-The volumes are pre-processed using: \gls{nlm} denoising, flattening and resizing of the B-scans to ensure homogeneous dimension across all volumes.
-Finally, an appearance model to be used for feature detection at testing stage is created as follows:
-(i) intensity values of each B-scans for all \emph{normal} volumes within the training set are projected into a lower space using \gls{pca}.
-(ii) \gls{gmm} to describe the resulting space.
-
-During the testing stage, the testing volume is pre-processed in the same manner than during training.
-The detected feature for each B-scan corresponds to whether the B-scan follows or not the \gls{gmm} learned during the training stage.
-To do so, the B-scan is projected to the same lower space and then compared to the learned \gls{gmm} using the Mahalanobis distance.
-The mapping is global and the feature representation corresponds to the concatenation of the outlier detection used as feature detection.
-The final decision is hard-coded and based on the number of outliers (abnormal) B-scans per volume.
-
+Sankar~\textit{et~al.} propose to use a semi-supervised strategy to classify \gls{dme} \emph{vs.} normal \gls{oct} volumes~\cite{sankar2016classification}.
+The main difference between this method and the supervised methodologies lies in the fact that only normal volumes are used to train the system.
+For each \gls{oct} volume, the B-scans are denoised using \gls{nlm} filtering, flattened, and resized to ensure homogeneous dimension across all volumes.
+Each B-scan is vectorized and projected into a lower-dimensional space using \gls{pca}.
+Subsequently, normal B-scans are modelled using a \gls{gmm} in which the number of Gaussian $K$ is determined on a validation set.
+At the testing stage, a scan is classified as normal or \gls{dme} depending of its Mahalanobis distance to the learnt model; if the distance is greater than the $97.5 \%$ quantile of the Chi-squared distribution with $K$ degree of freedom.
+Therefore, a volume is classified as abnormal if the number of abnormal slice is greater than a given threshold, previously determined during the validation procedure.
+A \gls{se} and \gls{sp} of $93.8 \%$ and $80.0$ are respectively achieved on a cohort of 32 patients.
