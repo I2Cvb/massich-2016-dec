@@ -97,31 +97,31 @@ All the obtained histograms are concatenated into a global descriptor whose dime
 Finally, a \gls{svm} with an \gls{rbf} kernel is used as classifier.
 %
 % results report
-The method achieved good detection performance of \gls{oct} scan containing different pathologies with an \gls{auc} of $0.93$ using a dataset of $326$ \gls{oct} scans.
+A detection rate with an \gls{auc} of $0.93$ is achieved, using a dataset of $326$ \gls{oct} scans with various pathologies.
 
 %Albarrak paper
 % description
-Albarrak~\textit{et~al.}~\cite{albarrak2013age} propose another volumetric classification framework for differentiating \gls{amd} and normal volumes.
+Albarrak~\textit{et~al.} propose another classification framework to differentiate \gls{amd} and normal volumes~\cite{albarrak2013age}.
 %
 % Method description
-The author propose to flatten the \gls{voi} from each \gls{oct} volume as a pre-processing step and extract \gls{lbptop} and \gls{hog}+\gls{lbptop} features from individual sub-volumes within each \gls{voi}.
-The extracted features were concatenated into a single feature vector per \gls{oct} volume and presented in lower dimensions using \gls{pca}.
-Finally a Bayesian network classifier was used for classifying the volumes.
+Each \gls{oct} slice undergoes two pre-processing routines: (i) a joint denoising and cropping step using the split Bregman isotropic total variation algorithm and (ii) a flattening step by fitting a second-order polynomial using a least-square approach.
+Then, \gls{lbptop} and \gls{hog} combined with \gls{lbptop} features are extracted from individual sub-volumes from each original cropped volume.
+These features are concatenated into a single feature vector per \gls{oct} volume and its dimension is reduced using \gls{pca}.
+Finally, a Bayesian network classifier is used to classify the volumes.
 %
 %results
-Testing their proposed method and comparing with \cite{Liu2011} using 140 \gls{oct} volumes, they achieved the highest \gls{se} and \gls{sp} of 92.4\% and 90.5\%, respectively.
+The classification performance of the framework in terms of \gls{se} and \gls{sp} achieve $92.4 \%$ and $90.5 \%$, respectively, outperforming the method of Liu~\emph{et~al.}~\cite{Liu2011}, using a dataset composed of $140$ \gls{oct} volumes.
 
 % Anantrairichai paper
 % description
-Anantrasirichai~\textit{et~al.}~\cite{anantrasirichai2013svm} propose to detect glaucoma in \gls{oct} images based on a variety of texture measures.
+Anantrasirichai~\textit{et~al.}~\cite{anantrasirichai2013svm} propose to detect glaucoma in \gls{oct} images based on a variety of texture descriptor.
 %
 %Method description
-The images are described in terms of \gls{lbp}, \gls{glcm}, wavelet, granulometry, run length measures, and intensity level distributions in combination with retinal layer thickness without any pre-processing.
-Using \gls{pca} and linear and kernel-\gls{svm} classifier, the authors compared the performance of individual features and their combinations.
+The texture information is described through \gls{lbp}, \gls{glcm}, wavelet, granulometry, run length measures, and intensity level distributions in combination with retinal layer thickness estimation, without any pre-processing.
+Each feature vector is projected using \gls{pca} before to be classified using an \gls{svm} with both linear and \gls{rbf} kernel.
 %
 % results
-Testing with rather a small dataset of 24 \gls{oct} voluems, their proposed method achieved an \gls{acc} of 81.95\% while using layer thickness information.
-
+The best performance is obtained by combining the layer thickness information with the texture descriptors to get an \gls{acc} of $81.95 \%$.
 
 \subsection{Semi-supervised methods}
 An example of semi-supervised approach for \gls{sdoct} classification is recently proposed by Sankar~\textit{et~al.}~\cite{sankar2016classification}.
