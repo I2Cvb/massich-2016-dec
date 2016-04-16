@@ -8,35 +8,35 @@
     &  &  &  &  & \\
 \midrule
 	&  &  &  &  & \\
-%Venhuizen\,\textit{et al.}~
-\multirow{2}{*}{Venhuizen \textit{et al.}~\cite{Venhuizen2015,venhuizen2015feb-repoICPR}} &  & \multirow{2}{*}{Texton} & \multirow{2}{*}{Local}   &\gls{pca} & \multirow{2}{*}{\gls{rf}} \\
+%Venhuizen~\textit{et~al.}~
+\multirow{2}{*}{Venhuizen~\textit{et~al.}~\cite{Venhuizen2015,venhuizen2015feb-repoICPR}} &  & \multirow{2}{*}{Texton} & \multirow{2}{*}{Local}   &\gls{pca} & \multirow{2}{*}{\gls{rf}} \\
 	&  &  &  & \gls{bow} & \\
 	&  &  &  &  & \\
-%Srinivansan\,\textit{et al.}~
-\multirow{3}{*}{Srinivasan \textit{et al.}~\cite{Srinivasan2014, srinivasan2014oct-repoICPR}} & De-noise & \multirow{3}{*}{\gls{hog}} & \multirow{3}{*}{Global} & &  Linear- \\
- & Flatten & & & &\gls{svm} \\
- & Cropped & & & & \\
+%Srinivansan~\textit{et~ al.}
+\multirow{3}{*}{Srinivasan~\textit{et~al.}~\cite{Srinivasan2014, srinivasan2014oct-repoICPR}} & Denoising & \multirow{3}{*}{\gls{hog}} & \multirow{3}{*}{Global} & &  Linear- \\
+ & Flattening & & & &\gls{svm} \\
+ & Cropping & & & & \\
 	&  &  &  &  & \\
-%Lema\^itre\,\textit{et al.}~
-\multirow{3}{*}{Lemaitre \textit{et al.}~\cite{Lemaintre2015miccaiOCT, lemaitre2015apr-repoICPR}} & \multirow{3}{*}{De-noised} & \gls{lbp} & Local &  \gls{pca} &  \multirow{3}{*}{\gls{rf}} \\
+%Lema\^itre~\textit{et~al.}~
+\multirow{3}{*}{Lemaitre~\textit{et~al.}~\cite{Lemaintre2015miccaiOCT, lemaitre2015apr-repoICPR}} & \multirow{3}{*}{Denoising} & \gls{lbp} & Local &  \gls{pca} &  \multirow{3}{*}{\gls{rf}} \\
 & & \gls{lbptop} & Global & \gls{bow}& \\ 
 	&  &  &  &Histogram & \\
 &  &  &  &  & \\
 
-\multirow{3}{*}{Alsaih \textit{et al.}~\cite{Alsaih2016apr-repoICPR}} & De-noise & \gls{lbp} & \multirow{3}{*}{Local} &  \gls{pca} &  Linear- \\
-& Flatten & \gls{hog} &  & Histogram  & \gls{svm}\\ 
-& Cropped & & & & \\
+\multirow{3}{*}{Alsaih~\textit{et~al.}~\cite{Alsaih2016apr-repoICPR}} & De-noise & \gls{lbp} & \multirow{3}{*}{Local} &  \gls{pca} &  Linear- \\
+& Flattening & \gls{hog} &  & Histogram  & \gls{svm}\\ 
+& Cropping & & & & \\
 &  &  &  &  & \\
 
-\multirow{2}{*}{Liu \textit{et al.}~\cite{Liu2011}} & Flatten & Edge & \multirow{2}{*}{Local} & \multirow{2}{*}{\gls{pca}}& \gls{rbf}- \\
+\multirow{2}{*}{Liu~\textit{et~al.}~\cite{Liu2011}} & Flatten & Edge & \multirow{2}{*}{Local} & \multirow{2}{*}{\gls{pca}}& \gls{rbf}- \\
  & Aligned & \gls{lbp} & & & \gls{svm} \\
  	&  &  &  &  & \\
 
 %\midrule
 \hdashline \noalign{\vskip 3pt}
-\multirow{3}{*}{Sankar \textit{et al.}~\cite{sankar2016classification, sankar2015feb-repoICPR}} & De-noised & Pixel & \multirow{3}{*}{Global} & \multirow{3}{*	}{\gls{pca}} & Mahalanobis \\
- & Flatten &-intensities & & & -distance\\
- & Cropped & & & & to \gls{gmm}\\ 
+\multirow{3}{*}{Sankar~\textit{et~al.}~\cite{sankar2016classification, sankar2015feb-repoICPR}} & Denoising & Pixel & \multirow{3}{*}{Global} & \multirow{3}{*	}{\gls{pca}} & Mahalanobis \\
+ & Flattening &intensities & & & -distance\\
+ & Cropping & & & & to \gls{gmm}\\ 
 \bottomrule
 \end{tabular}}
 }
