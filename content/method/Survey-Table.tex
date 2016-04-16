@@ -9,21 +9,24 @@
 \midrule
 	&  &  &  &  & \\
 %Venhuizen\,\textit{et al.}~
-Venhuizen \textit{et al.}~\cite{Venhuizen2015,venhuizen2015feb-repoICPR} &  & Texton & Local   &\gls{bow}, \gls{pca}  & \gls{rf} \\
+\multirow{2}{*}{Venhuizen \textit{et al.}~\cite{Venhuizen2015,venhuizen2015feb-repoICPR}} &  & \multirow{2}{*}{Texton} & \multirow{2}{*}{Local}   &\gls{pca} & \multirow{2}{*}{\gls{rf}} \\
+	&  &  &  & \gls{bow} & \\
 	&  &  &  &  & \\
 %Srinivansan\,\textit{et al.}~
-\multirow{3}{*}{Srinivasan \textit{et al.}~\cite{Srinivasan2014, srinivasan2014oct-repoICPR}} & De-noise & \multirow{3}{*}{\gls{hog}} & \multirow{3}{*}{Global} & &  \multirow{3}{*}{linear-\gls{svm}} \\
- & Flatten & & & & \\
+\multirow{3}{*}{Srinivasan \textit{et al.}~\cite{Srinivasan2014, srinivasan2014oct-repoICPR}} & De-noise & \multirow{3}{*}{\gls{hog}} & \multirow{3}{*}{Global} & &  Linear- \\
+ & Flatten & & & &\gls{svm} \\
  & Cropped & & & & \\
 	&  &  &  &  & \\
 %Lema\^itre\,\textit{et al.}~
-Lemaitre \textit{et al.}~\cite{Lemaintre2015miccaiOCT, lemaitre2015apr-repoICPR} & De-noised & \gls{lbp} & Local &  \gls{pca}, &  \gls{rf} \\
-& & \gls{lbptop} & Global & \gls{bow}, Histogram & \\ 
-	&  &  &  &  & \\
+\multirow{3}{*}{Lemaitre \textit{et al.}~\cite{Lemaintre2015miccaiOCT, lemaitre2015apr-repoICPR}} & \multirow{3}{*}{De-noised} & \gls{lbp} & Local &  \gls{pca} &  \multirow{3}{*}{\gls{rf}} \\
+& & \gls{lbptop} & Global & \gls{bow}& \\ 
+	&  &  &  &Histogram & \\
+&  &  &  &  & \\
 
-Alsaih \textit{et al.}~\cite{Alsaih2016apr-repoICPR} & ********* & \gls{lbp} & ***** &  \gls{pca}, &  \gls{rf} \\
-& & \gls{lbptop} & ****** & \gls{bow}, ********* & \\ 
-	&  &  &  &  & \\
+\multirow{3}{*}{Alsaih \textit{et al.}~\cite{Alsaih2016apr-repoICPR}} & De-noise & \gls{lbp} & \multirow{3}{*}{Local} &  \gls{pca} &  Linear- \\
+& Flatten & \gls{hog} &  & Histogram  & \gls{svm}\\ 
+& Cropped & & & & \\
+&  &  &  &  & \\
 
 %Liu\,\textit{et al.}~
 % \multirow{2}{*}{Liu \textit{et al.}~\cite{Liu2011}} & Flatten & \multirow{2}{*}{Edge, \gls{lbp}} & \multirow{2}{*}{Local} & \multirow{2}{*}{\gls{pca}}& \multirow{2}{*}{\gls{rbf}-\gls{svm}} \\
