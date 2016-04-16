@@ -15,9 +15,22 @@ This dataset was acquired by the \gls{seri}, using CIRRUS TM (Carl Zeiss Meditec
 The dataset consists of 32 \gls{oct} volumes (16 \gls{dme} and 16 normal cases).
 Each volume contains 128 B-scan with resolution of 512 $\times$ 1024 pixels.  All \gls{sdoct} images are read and assessed by trained graders and identified as normal or \gls{dme} cases based on evaluation of retinal thickening, hard exudates, intraretinal cystoid space formation and subretinal fluid.
 
-\begin{figure}
-  \centering{
-    \includegraphics[width=1\linewidth]{bbdd}}
-    \caption{\gls{seri} dataset description.}
+\begin{figure*}
+\begin{center}
+   \subfigure[Vitreomacular traction]{\includegraphics[width=0.3\textwidth]{Vitreomacular}}\
+   \subfigure[Rethinal thickening]{\includegraphics[width = 0.3\textwidth]{RE}} \
+   \subfigure[Cyst spaces, causing central and parafoveal retina thickening]{\includegraphics[width=0.3\textwidth]{Cyst}}\\
+   \subfigure[Cyst spaces and hard exudates, causing central retinal thickening]{\includegraphics[width = 0.3\textwidth]{Cyst+HE+RE}} \
+   \subfigure[CSR (subretinal fluid), causing central and parafoveal thickening]{\includegraphics[width = 0.3\textwidth]{CSR}} \
+   \subfigure[CSR, hard exudates and cyst spaces]{\includegraphics[width = 0.3\textwidth]{Cyst+CSR+HE}} \\
+   \subfigure[Cyst spaces, causing retinal thickening]{\includegraphics[width = 0.3\textwidth]{Cyst+RE}} \
+   \subfigure[CSR and hard exudates, causing retinal thickening]{\includegraphics[width = 0.3\textwidth]{CSR+HE+RE}} \   
+   \subfigure[Cyst spaces causing parafoveal thickening]{\includegraphics[width = 0.3\textwidth]{Cyst+RE_parafovel}} \\
+    
+\end{center}
+    \caption{Examples of \gls{dme} cases in \gls{seri} dataset.}
   \label{fig:bbdd}
-\end{figure}
+\end{figure*}
+% 4, 2, 1\\
+% 1, 1, 1\\
+% 3, 2, 1\\
