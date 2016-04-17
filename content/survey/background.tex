@@ -129,8 +129,8 @@ Sankar~\textit{et~al.} propose to use a semi-supervised strategy to classify \gl
 The main difference between this method and the supervised methodologies lies in the fact that only normal volumes are used to train the system.
 
 For each \gls{oct} volume, the B-scans are denoised using \gls{nlm} filtering, flattened, and resized to ensure homogeneous dimension across all volumes.
-Each B-scan is vectorized and projected into a lower-dimensional space using \gls{pca}.
-Subsequently, normal B-scans are modelled using a \gls{gmm} in which the number of Gaussian $K$ is determined on a validation set.
-At the testing stage, a scan is classified as normal or \gls{dme} depending of its Mahalanobis distance to the learnt model; if the distance is greater than the $97.5 \%$ quantile of the Chi-squared distribution with $K$ degree of freedom.
+Each B-scan is vectorized and projected into a lower-dimensional space wiht $p$ dimensions using \gls{pca}.
+Subsequently, normal B-scans are modelled using a \gls{gmm} in which the number of mixture components $K$ is determined on a validation set.
+At the testing stage, a scan is classified as normal or \gls{dme} depending of its Mahalanobis distance to the learnt model; if the distance is greater than the $97.5 \%$ quantile of the Chi-squared distribution with $p$ degree of freedom.
 Therefore, a volume is classified as abnormal if the number of abnormal slice is greater than a given threshold, previously determined during the validation procedure.
 A \gls{se} and \gls{sp} of $93.8 \%$ and $80.0$ are respectively achieved on a cohort of 32 patients.
