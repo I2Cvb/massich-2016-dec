@@ -10,11 +10,8 @@ Where the most relevant works in Sect.\,\ref{sec:review} are formulated as the a
 
 \subsection{Implementation details}\label{sec:exp:implementation}
 The experiments, described in this work, are publicly available at~\cite{rethinopaty20016apr-repoICPR} allowing for further comparisons and improvements.
-Each method from Table~\ref{tab:survey-tab} has been implemented, using the library \emph{protoclass}~\cite{protoclass2016apr-repoICPR} to perform the image processing and \gls{ml} tasks.
-Furthermore, each method has been evaluated in a common framework a stated in Sect.\,\ref{}.
-
-{\color{red}Each methodology implementation can be seen as a plug-in to experiment in \cite{rethinopaty20016apr-repoICPR}, while references to stand-alone implementation of these methodologies can be found in Table~\ref{tab:survey-tab}.
-All the repositories are publicly available and provided with tests to ensure that our implementation agrees with the results reported by the original works.}
+All the methods table~\ref{tab:survey-tab} have been developed using \emph{protoclass}~\cite{protoclass2016apr-repoICPR}, a rapid prototyping toolkit to perform image processing and \gls{ml} tasks.
+Furthermore, each method has been implemented as a plug-in to~\cite{rethinopaty20016apr-repoICPR}, so that all methods can be evaluated in a common framework\foodnote{See table\,\ref{tab:survey-tab} for standalone repositories of each method. All repositories provide tests to ensure that our implementation comply with the original work.}.
 
 Note that Liu~\emph{et~al.} train the algorithm at the B-scan level, and \gls{seri} dataset provides \gls{gt} at volume level only.
 Thus, two strategies have been explored to solve this issue:
