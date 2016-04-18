@@ -1,4 +1,4 @@
-\begin{table}
+\begin{table*}
   \caption{Correspondence between the most relevant methodologies reviewed in Sect.\,\ref{sec:review} and the proposed experimental framework.}
 \resizebox{1\linewidth}{!}{
 \footnotesize{
@@ -13,17 +13,17 @@
 	&  &  &  & \gls{bow} & \\
 	&  &  &  &  & \\
 %Srinivansan~\textit{et~ al.}
-\multirow{3}{*}{Srinivasan~\textit{et~al.}~\cite{Srinivasan2014, srinivasan2014oct-repoICPR}} & \gls{bm3d} & \multirow{3}{*}{\gls{hog}} & \multirow{3}{*}{Global} & &  Linear- \\
+\multirow{3}{*}{Srinivasan~\textit{et~al.}~\cite{Srinivasan2014, srinivasan2014oct-repoICPR}} & Denoising (\gls{bm3d}) & \multirow{3}{*}{\gls{hog}} & \multirow{3}{*}{Global} & &  Linear- \\
  & Flattening & & & &\gls{svm} \\
  & Cropping & & & & \\
 	&  &  &  &  & \\
 %Lema\^itre~\textit{et~al.}~
-\multirow{3}{*}{Lemaitre~\textit{et~al.}~\cite{Lemaintre2015miccaiOCT, lemaitre2015apr-repoICPR}} & \multirow{3}{*}{\gls{nlm}} & \gls{lbp} & Local &  \gls{pca} &  \multirow{3}{*}{\gls{rf}} \\
+\multirow{3}{*}{Lemaitre~\textit{et~al.}~\cite{Lemaintre2015miccaiOCT, lemaitre2015apr-repoICPR}} & \multirow{3}{*}{ Denoising (\gls{nlm}) } & \gls{lbp} & Local &  \gls{pca} &  \multirow{3}{*}{\gls{rf}} \\
 & & \gls{lbptop} & Global & \gls{bow}& \\
 	&  &  &  &Histogram & \\
 &  &  &  &  & \\
 
-\multirow{3}{*}{Alsaih~\textit{et~al.}~\cite{Alsaih2016apr-repoICPR}} & \gls{bm3d} & \gls{lbp} & \multirow{3}{*}{Local} &  \gls{pca} &  Linear- \\
+\multirow{3}{*}{Alsaih~\textit{et~al.}~\cite{Alsaih2016apr-repoICPR}} & Denoising (\gls{bm3d}) & \gls{lbp} & \multirow{3}{*}{Local} &  \gls{pca} &  Linear- \\
 & Flattening & \gls{hog} &  & Histogram  & \gls{svm}\\
 & Cropping & & & & \\
 &  &  &  &  & \\
@@ -34,14 +34,14 @@
 
 %\midrule
 \hdashline \noalign{\vskip 3pt}
-\multirow{3}{*}{Sankar~\textit{et~al.}~\cite{sankar2016classification, sankar2015feb-repoICPR}} & \gls{nlm} & Pixel & \multirow{3}{*}{Global} & \multirow{3}{*	}{\gls{pca}} & Mahalanobis \\
+\multirow{3}{*}{Sankar~\textit{et~al.}~\cite{sankar2016classification, sankar2015feb-repoICPR}} & Denoising (\gls{nlm}) & Pixel & \multirow{3}{*}{Global} & \multirow{3}{*	}{\gls{pca}} & Mahalanobis \\
  & Flattening &intensities & & & -distance\\
  & Cropping & & & & to \gls{gmm}\\
 \bottomrule
 \end{tabular}}
 }
 \label{tab:survey-tab}
-\end{table}
+\end{table*}
 
 %\begin{table*}
 %\caption{Summary of the state-of-the-art methods.}
