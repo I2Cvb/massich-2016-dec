@@ -16,7 +16,8 @@ All the repositories are publicly available and provided with tests to ensure th
 \footnote{Note that methodologies where this quality control could not had been enforced have been discarded for experimentation and only reviewed based on the results reported by the original work and compiled in Sect.\,\ref{sec:review}.}
 
 \subsection{Evaluation}\label{sec:exp:evaluation}
-All the experiments are evaluated in terms of \gls{se} and \gls{sp} (see Fig.\,\ref{fig:evaluation}) using the \gls{lopocv} strategy, in line with \cite{Lemaintre2015miccaiOCT}.
+All the experiments are evaluated in terms of \gls{se} and \gls{sp} (see Fig.\,\ref{fig:evaluation}) using the \gls{ltpocv} strategy, in line with \cite{Lemaintre2015miccaiOCT}.
+Therefore, at each cross-validation iteration, a \gls{dme} and normal volumes are kept for testing, while the remaining volumes are used as training.
 The \gls{se} evaluates the performance of the classifier with respect to the positive class, while the \gls{sp} evaluates its performance with respect to negative class.
 
 \input{./content/method/figures/evaluation_corolary_def.tex}
@@ -64,9 +65,9 @@ The \gls{se} evaluates the performance of the classifier with respect to the pos
   \label{fig:evaluation}
 \end{figure}
 
-The use of \gls{lopocv} implies that at each round, a pair \gls{dme}-normal volume is selected for testing while the remaining volumes are used for training.
+The use of \gls{ltpocv} implies that at each round, a pair \gls{dme}-normal volume is selected for testing while the remaining volumes are used for training.
 Subsequently, no \gls{se} or \gls{sp} variance can be reported.
-However, \gls{lopocv} strategy has been adopted despite this limitation due to the reduced size of the dataset.
+However, \gls{ltpocv} strategy has been adopted despite this limitation due to the reduced size of the dataset.
 
 % \subsection{Management of data depending terms}
 % \deleted[id=sik]{
