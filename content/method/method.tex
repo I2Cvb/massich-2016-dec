@@ -16,13 +16,53 @@ All the repositories are publicly available and provided with tests to ensure th
 \footnote{Note that methodologies where this quality control could not had been enforced have been discarded for experimentation and only reviewed based on the results reported by the original work and compiled in Sect.\,\ref{sec:review}.}
 
 \subsection{Evaluation}\label{sec:exp:evaluation}
-All the experiments are evaluated in terms of \gls{se} and \gls{sp} (see Eq.\,\ref{eq:sesp}) using the \gls{lopocv} strategy, in line with \cite{Lemaintre2015miccaiOCT}.
+All the experiments are evaluated in terms of \gls{se} and \gls{sp} (see Fig.\,\ref{fig:evaluation}) using the \gls{lopocv} strategy, in line with \cite{Lemaintre2015miccaiOCT}.
 The \gls{se} evaluates the performance of the classifier with respect to the positive class, while the \gls{sp} evaluates its performance with respect to negative class.
 
-\begin{align}
- \gls{se}  = \frac{TP}{TP+FN} \qquad \gls{sp} = \frac{TN}{TN+FP}
- \label{eq:sesp}
-\end{align}
+\input{./content/method/figures/evaluation_corolary_def.tex}
+\begin{figure}
+
+  \def\myRadius{.65cm}
+  \def\vennSpace{(0,0) rectangle (2.6cm,1.6cm)}
+  \def\predictedCircle{(.8cm,.8cm) circle (\myRadius)}
+  \def\actualCircle{(1.8cm,.8cm) circle (\myRadius)}
+  \def\myLabelRadius{.450cm}
+
+  \subfigure[][Confusion matrix with truly and falsely positive samples detected (TP, FP) in the first row, from left to right and the falsely and truly negative samples detected (FN, TN) in the second row, from left to right.]{
+    \label{fig:evaluation:confusion_matrix}
+    \begin{tikzpicture}[scale=0.5]
+      \node at (0,0){
+        \begin{tabular}{
+            >{\centering}m{1em} >{\centering}m{1em} >{\centering}m{1in} >{\centering\arraybackslash}m{1in}}
+          % c>{\centering}m{2em}ccc}
+          & & \multicolumn{2}{c}{ Actual Class }\\
+          & & A+ & A- \\
+          % \parbox[t]{2mm}{\multirow{2}{*}{\rotatebox[origin=c]{90}{\usebox \centering Predicted Class}}}& P+ &  \tikz{\tp} & \tikz{\fp} \\
+          \multirow{3}{*}{\rotatebox[origin=c]{90}{Predicted Class}}& P+ &  \tikz{\tp} & \tikz{\fp} \\
+          & P- & \tikz{\fn} & \tikz{\tn}
+        \end{tabular}
+      };
+    \end{tikzpicture}
+  }\\
+  \centering
+  \subfigure[][\gls{se} and \gls{sp} evaluation, corresponding to the ratio of the doted area over the blue area.]{
+    \label{fig:evaluation:roc_axis}
+    \begin{tikzpicture}[scale=0.5]
+      \def\seEquation{$SE = \frac{TP}{TP+FN}$}
+      \def\spEquation{$SP = \frac{TN}{TN+FP}$}
+      \node[label={[]below:\seEquation}](se){\tikz{\se}};
+      \node[right=5pt of se, label={[]below:\spEquation}]{\tikz{\sp}};
+      % \node[label={[]right:\seEquation}](se){\tikz{\se}};
+      % \node[below=5pt of se, label={[]right:\spEquation}]{\tikz{\sp}};
+    \end{tikzpicture}
+  }
+
+  \caption{Evaluation metrics:
+    \protect\subref{fig:evaluation:confusion_matrix} confusion matrix,
+    \protect\subref{fig:evaluation:roc_axis} \gls{se} - \gls{sp}
+  }
+  \label{fig:evaluation}
+\end{figure}
 
 The use of \gls{lopocv} implies that at each round, a pair \gls{dme}-normal volume is selected for testing while the remaining volumes are used for training.
 Subsequently, no \gls{se} or \gls{sp} variance can be reported.
