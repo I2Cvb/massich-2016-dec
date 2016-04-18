@@ -16,8 +16,11 @@ Furthermore, each method has been evaluated in a common framework a stated in Se
 {\color{red}Each methodology implementation can be seen as a plug-in to experiment in \cite{rethinopaty20016apr-repoICPR}, while references to stand-alone implementation of these methodologies can be found in Table~\ref{tab:survey-tab}.
 All the repositories are publicly available and provided with tests to ensure that our implementation agrees with the results reported by the original works.}
 
-Notice that Liu~\emph{et~al.} train the algorithm at the B-scan level, and \gls{seri} dataset provides \gls{gt} at volume level only.
-Thus, we replicated here the training strategy reported by Srinivasan~\emph{et~al.} which considers to be abnormal all the B-scans from any abnormal volume~\cite{Srinivasan2014}.
+Note that Liu~\emph{et~al.} train the algorithm at the B-scan level, and \gls{seri} dataset provides \gls{gt} at volume level only.
+Thus, two strategies have been explored to solve this issue:
+(i) similarly to Srinivasan~\emph{et~al.}, at training stage, all B-scans are considered as abnormal for a DME volume and at testing stage, a majority vote rule is applied to whether label a volume as abnormal or not;
+(ii) similarly to Alsaih~\emph{et~al.}, an approach using BoW is used.
+% The strategy to the best classification performance will be reported in Table~\ref{tab:summary_results}.
 From the methods reviewed in Sect.\,\ref{sec:review}, we decline to implement Albarrak~\emph{et~al.} and Anantrasirichai~\textit{et~al.}.
 The former does not provide sufficient implementation details to replicate their results~\cite{albarrak2013age};
 while, the latter, uses a descriptor based on the layer thickness which require a layer segmentation stage using a generic segmentation algorithm and further user validation~\cite{anantrasirichai2013svm}.
