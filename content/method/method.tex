@@ -23,7 +23,7 @@ The former do not provide sufficient implementation details to replicate their r
 while, the latter use a descriptor based on the layer thickness which require a layer segmentation stage using a generic segmentation algorithm and further user validation~\cite{anantrasirichai2013svm}.
 
 
-\subsection{Evaluation}\label{sec:exp:evaluation}
+\subsection{Evaluation}\label{sec:evaluation}
 All the experiments are evaluated in terms of \gls{se} and \gls{sp} (see Fig.\,\ref{fig:evaluation}) using the \gls{ltpocv} strategy, in line with \cite{Lemaintre2015miccaiOCT}.
 Therefore, at each cross-validation iteration, a \gls{dme} and normal volumes are kept for testing, while the remaining volumes are used as training.
 The \gls{se} evaluates the performance of the classifier with respect to the positive class, while the \gls{sp} evaluates its performance with respect to negative class.
