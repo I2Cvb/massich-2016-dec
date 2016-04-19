@@ -1,17 +1,17 @@
 \section{Results and Discussion}\label{sec:results}\label{sec:discussion}
 
 % Presenting the results
-The entire set of experiments with their associated results can be found in~\cite{rethinopaty20016apr-repoICPR}, while Table~\ref{tab:summary_results} shows the configuration leading to the best results of each method.
-The results are reported in terms of \gls{se} and \gls{sp} (see Sect.\,\ref{sec:evaluation}), and sorted left to right in descending order.
+The entire set of experiments with their associated results can be found in~\cite{rethinopaty20016apr-repoICPR}, while Table~\ref{tab:survey-tab} shows the configuration leading to the best results of each method.
+The results are reported in terms of \gls{se} and \gls{sp} (see Sect.\,\ref{sec:evaluation}).
 
 % Presenting which configuration gives best results
-Lemaitre~\emph{et~al.} achieves the best results when using \gls{lbptop} features, a global mapping, and histogram representation~\cite{Lemaintre2015miccaiOCT}.
-Alsaih~\emph{et~al.} performs better when using \gls{hog} features with \gls{pca} representation~\cite{Alsaih2016apr-repoICPR}.
+Lemaitre~\emph{et~al.} achieve the best results when using \gls{lbptop} features, a global mapping, and histogram representation~\cite{Lemaintre2015miccaiOCT}.
+Alsaih~\emph{et~al.} perform better when using \gls{hog} features with \gls{pca} representation~\cite{Alsaih2016apr-repoICPR}.
 Our interpretation of Liu~\emph{et~al.}, as proposed in Sect.\,\ref{sec:exp}, achieves the best results when using majority voting instead of \gls{bow} models.
 Refer to Table~\ref{tab:survey-tab} for configuration details of the remaining methods.
 
 % Comparison Details
-Results in~\cite{rethinopaty20016apr-repoICPR} indicate two main factors with major impact:
+Results in~\cite{rethinopaty20016apr-repoICPR} indicate two main findings with major impact:
 (i) features describing the entire volume rather than each B-scan are more discriminative; and
 (ii) a pre-processing stage with denoising is fundamental.
 
@@ -19,5 +19,5 @@ Results in~\cite{rethinopaty20016apr-repoICPR} indicate two main factors with ma
 Other observations include the facts that
 (i) to represent B-scans, local mapping in conjunction with dimension reduction, either using \gls{pca} or \gls{bow}, improve the results.
 However, the combination of both decreases the performance in comparison to non reduced histogram representation;
-(ii) building \gls{bow} models from concatenated detected features, might lead to the curse of dimensionality, which would explain why the \gls{rbf}-\gls{svm} overfits in~\cite{liu20016apr-repoICPR}.
-(ii) building \gls{bow} models from the concatenation of all detected features for each B-scan~\cite{liu20016apr-repoICPR}, might lead to the curse of dimensionality since $128$ samples per volume is not enough to describe a space with a number of dimensions of the order of millions; which could explain the over-fitting using \gls{rbf}-\gls{svm} as in.
+(ii) building \gls{bow} models from concatenated detected features, might lead to the curse of dimensionality, which would explain why the \gls{rbf}-\gls{svm} overfits in~\cite{liu20016apr-repoICPR};
+(iii) building \gls{bow} models from the concatenation of all features for each B-scan, might lead to the curse of dimensionality since $128$ samples per volume is not enough to describe a space with a number of dimensions of the order of thousands; which could explain the over-fitting using \gls{rbf}-\gls{svm} as in~\cite{liu20016apr-repoICPR}.

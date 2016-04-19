@@ -90,11 +90,11 @@ Liu~\textit{et~al.} propose a methodology aiming at classifying B-scan rather th
 The classification goal is to distinguish between macular pathology and normal \gls{oct} B-scan images using \gls{lbp} and gradient information as attributes~\cite{Liu2011}.
 %
 % Method description
-Each \gls{oct} slice are flattened before to create a $3$-level mutlti-scale spatial pyramid.
+Each \gls{oct} slice is flattened before to create a $3$-level mutlti-scale spatial pyramid.
 From each layer of this pyramid, edges are extracted and \gls{lbp} descriptors are computed for the flattened slice and the edge map.
 %is created and edge and \gls{lbp} histograms are extracted in each block at every level of the pyramid.
 All the obtained histograms are concatenated into a global descriptor whose dimensions are reduced using \gls{pca}.
-Finally, a \gls{svm} with an \gls{rbf} kernel is used as classifier.
+Finally, a \gls{svm} with a \gls{rbf} kernel is used as classifier.
 %
 % results report
 A detection rate with an \gls{auc} of $0.93$ is achieved, using a dataset of $326$ \gls{oct} scans with various pathologies.
@@ -110,7 +110,7 @@ These features are concatenated into a single feature vector per \gls{oct} volum
 Finally, a Bayesian network classifier is used to classify the volumes.
 %
 %results
-The classification performance of the framework in terms of \gls{se} and \gls{sp} achieve $92.4 \%$ and $90.5 \%$, respectively, outperforming the method of Liu~\emph{et~al.}~\cite{Liu2011}, using a dataset composed of $140$ \gls{oct} volumes.
+The classification performance of the framework in terms of \gls{se} and \gls{sp} achieves $92.4 \%$ and $90.5 \%$, respectively, outperforming the method of Liu~\emph{et~al.}~\cite{Liu2011}, using a dataset composed of $140$ \gls{oct} volumes.
 
 % Anantrairichai paper
 % description
@@ -121,7 +121,7 @@ The texture information is described through \gls{lbp}, \gls{glcm}, wavelet, gra
 Each feature vector is projected using \gls{pca} before to be classified using an \gls{svm} with both linear and \gls{rbf} kernel.
 %
 % results
-Testing with rather a small dataset of 24 \gls{oct} voluems, their proposed method achieved an \gls{acc} of 81.95\% while using layer thickness information.
+Testing with rather a small dataset of 24 \gls{oct} volumes, their proposed method achieves an \gls{acc} of 85 \% while using layer thickness and textural informations.
 
 \subsection{Semi-supervised methods}
 
@@ -129,8 +129,8 @@ Sankar~\textit{et~al.} propose to use a semi-supervised strategy to classify \gl
 The main difference between this method and the supervised methodologies lies in the fact that only normal volumes are used to train the system.
 
 For each \gls{oct} volume, the B-scans are denoised using \gls{nlm} filtering, flattened, and resized to ensure homogeneous dimension across all volumes.
-Each B-scan is vectorized and projected into a lower-dimensional space wiht $p$ dimensions using \gls{pca}.
+Each B-scan is vectorized and projected into a lower-dimensional space with $p$ dimensions using \gls{pca}.
 Subsequently, normal B-scans are modelled using a \gls{gmm} in which the number of mixture components $K$ is determined on a validation set.
 At the testing stage, a scan is classified as normal or \gls{dme} depending of its Mahalanobis distance to the learnt model; if the distance is greater than the $97.5 \%$ quantile of the Chi-squared distribution with $p$ degree of freedom.
 Therefore, a volume is classified as abnormal if the number of abnormal slice is greater than a given threshold, previously determined during the validation procedure.
-A \gls{se} and \gls{sp} of $93.8 \%$ and $80.0$ are respectively achieved on a cohort of 32 patients.
+A \gls{se} and \gls{sp} of $93.8 \%$ and $80.0 \%$ are respectively achieved on a cohort of 32 patients.

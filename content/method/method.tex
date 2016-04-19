@@ -3,25 +3,24 @@
 
 \section{Experimental Setup}\label{sec:exp}
 
-The experimental set-up is summarized in Table~\ref{tab:survey-tab}.
-Where the most relevant works in Sect.\,\ref{sec:review} are formulated as the as the 5-steps standard classification procedure described in Fig.\,\ref{fig:ML-scheme}.
+The experimental set-up is summarized in Table~\ref{tab:survey-tab}, where the most relevant works in Sect.\,\ref{sec:review} are formulated as the 5-steps standard classification procedure described in Fig.\,\ref{fig:ML-scheme}.
 
 \input{content/method/Survey-Table.tex}
 
 \subsection{Implementation details}\label{sec:exp:implementation}
 The experiments, described in this work, are publicly available at~\cite{rethinopaty20016apr-repoICPR} allowing for further comparisons and improvements.
-All the methods table~\ref{tab:survey-tab} have been developed using \emph{protoclass}~\cite{protoclass2016apr-repoICPR}, a rapid prototyping toolkit to perform image processing and \gls{ml} tasks.
+All the methods in Table~\ref{tab:survey-tab} have been developed using \emph{protoclass}~\cite{protoclass2016apr-repoICPR}, a rapid prototyping toolkit to perform image processing and \gls{ml} tasks.
 Furthermore, each method has been implemented as a plug-in to~\cite{rethinopaty20016apr-repoICPR}, so that all methods can be evaluated in a common framework
 \footnote{See table\,\ref{tab:survey-tab} for standalone repositories of each method. All repositories provide tests to ensure that our implementation comply with the original work.}.
 
 Note that Liu~\emph{et~al.} train the algorithm at the B-scan level, and \gls{seri} dataset provides \gls{gt} at volume level only.
 Thus, two strategies have been explored to solve this issue:
 (i) similarly to Srinivasan~\emph{et~al.}, at training stage, all B-scans are considered as abnormal for a DME volume and at testing stage, a majority vote rule is applied to whether label a volume as abnormal or not;
-(ii) similarly to Alsaih~\emph{et~al.}, an approach using BoW is used.
+(ii) similarly to Venhuizen~\emph{et~al.}, an approach using BoW is used.
 % The strategy to the best classification performance will be reported in Table~\ref{tab:summary_results}.
 From the methods reviewed in Sect.\,\ref{sec:review}, we decline to implement Albarrak~\emph{et~al.} and Anantrasirichai~\textit{et~al.}.
-The former does not provide sufficient implementation details to replicate their results~\cite{albarrak2013age};
-while, the latter, uses a descriptor based on the layer thickness which require a layer segmentation stage using a generic segmentation algorithm and further user validation~\cite{anantrasirichai2013svm}.
+The former do not provide sufficient implementation details to replicate their results~\cite{albarrak2013age};
+while, the latter use a descriptor based on the layer thickness which require a layer segmentation stage using a generic segmentation algorithm and further user validation~\cite{anantrasirichai2013svm}.
 
 
 \subsection{Evaluation}\label{sec:evaluation}
@@ -74,7 +73,6 @@ The \gls{se} evaluates the performance of the classifier with respect to the pos
   \label{fig:evaluation}
 \end{figure}
 
-The use of \gls{ltpocv} implies that at each round, a pair \gls{dme}-normal volume is selected for testing while the remaining volumes are used for training.
 Subsequently, no \gls{se} or \gls{sp} variance can be reported.
-However, \gls{ltpocv} strategy has been adopted despite this limitation due to the reduced size of the dataset.
+%However, \gls{ltpocv} strategy has been adopted despite this limitation due to the reduced size of the dataset.
 
