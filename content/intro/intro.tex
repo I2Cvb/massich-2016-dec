@@ -4,20 +4,21 @@
 \section{Introduction}
 \label{sec:intro}  % \label{} allows reference to this section
 
-\gls{dr} and \gls{dme}, as common eye diseases, are leading causes of irreversible vision loss in individuals with diabetes.
-The number of individuals affected by diabetes dieases are expected to grow exponentially in the next decade. 
-Therefore the need for early detection and treatment of \gls{dr} and \gls{dme} is becoming a major health issue.
+\gls{dr} and \gls{dme} are leading causes of irreversible vision loss and the most common eye diseases in individuals with diabetes.
+Taking into account that the number of individuals affected by diabetes dieases are expected to grow exponentially in the next decade~\cite{wild2004global},
+developing methodologies for early detection and treatment of \gls{dr} and \gls{dme} has become a priority to prevent adverse effects such as blindness.
 %Number of people affected by diabetes are expected to grow exponentionally affecting over \SI{300}{M} pople worldwide by 2025~\cite{Wild2004}.
 %Just in United States alone, health care and associated costs related to eye diseases are estimated at almost \SI{500}[\$]{M}~\cite{Sharma2005}.
 %Moreover, the prevalent cases of \gls{dr} are expected to grow exponentially affecting over \SI{300}{M} people worldwide by 2025~\cite{Wild2004}.
 %Given this scenario, early detection and treatment of \gls{dr} and \gls{dme} play a major role to prevent adverse effects such as blindness.
 
 %\gls{dme} is characterized as an increase in retinal thickness within 1 disk diameter of the fovea center with or without hard exudates and sometimes associated with cysts~\cite{ETDRSG1985}.
-\gls{dme}, as the main focus of this article, is characterized as an increase in retinal thickness within 1 disk diameter of the fovea center with or without hard exudates and sometimes associated with cysts~\cite{ETDRSG1985}.
-For many years, fundus images have been the modality of choice to reveal most of eye pathologies~\cite{Mookiah20132136,Trucco2013}.
-However, \gls{oct} has recently shown to provide useful additional information about cross-sectional retinal morphology~\cite{Wang2015}, reflected by the growing interest in developing methodologies for this modality.
-In this sense, great efforts have been placed in retinal layers segmentation, which is a necessary step for retinal thickness measurements~\cite{Chiu2010,Kafieh2013}.
-However, few studies have addressed the specific problem of \gls{dme} automatic detection in \gls{oct} volumes, leaving a large ground to be covered in terms of: (i) manipulating \gls{oct} volumes, (ii) finding pathology signs, or (iii) appropriated classification strategies.
+The main focus of this work is to describe the actual state of \gls{dme} detection in \gls{oct} images.
+\gls{dme} presents an increase in retinal thickness within 1 disk diameter of the fovea center with or without hard exudates and sometimes associated with cysts~\cite{ETDRSG1985}.
+\gls{sdoct} is an emerging eye imaging modality providing corss-sectional retinal morphology information~\cite{Wang2015}, which cannot be estimated from more established eye imaging modalities such as fundus imaging.
+
+The initial efforts of the ophtalmic community in developing technologies for \gls{sdoct}, have been placed in segmenting the retinal layers, which is a necessary step for retinal thickness measurements~\cite{Chiu2010,Kafieh2013}.
+However, latter efforts address the specific problem of \gls{dme} automatic detection in \gls{oct} volumes, which revealed the need for addressing: (i) enhancing \gls{oct} volumes, (ii) finding pathology signs, or (iii) appropriated classification strategies.
 
 Advances in any of those regards is of great interest since (i) manual evaluation of \gls{sdoct} volumetric scans is expensive and time consuming~\cite{Venhuizen2015}.
 %(ii) \gls{sdoct} acquisition has some deficiencies due to eye movement during the scan~\cite{Liu2011}, the reflectivity nature of the retina~\cite{schuman2004optical}, the fact that \gls{oct} suffers from high levels of noise and the overall image quality is inconsistent~\cite{barnum2008local}.
