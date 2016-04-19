@@ -8,10 +8,10 @@ The results are reported in terms of \gls{se} and \gls{sp} (see Sect.\,\ref{sec:
 Lemaitre~\emph{et~al.} achieves the best results when using \gls{lbptop} features, a global mapping, and histogram representation~\cite{Lemaintre2015miccaiOCT}.
 Alsaih~\emph{et~al.} performs better when using \gls{hog} features with \gls{pca} representation~\cite{Alsaih2016apr-repoICPR}.
 Our interpretation of Liu~\emph{et~al.}, as proposed in Sect.\,\ref{sec:experiment}, achieves the best results when using majority voting instead of \gls{bow} models.
-Refer to Table~\ref{tab:survey-tab} for configuration details of the resting methods.
+Refer to Table~\ref{tab:survey-tab} for configuration details of the remaining methods.
 
 % Comparison Details
-Results in~\cite{rethinopaty20016apr-repoICPR} indicate two methodology factors with major impact in the results:
+Results in~\cite{rethinopaty20016apr-repoICPR} indicate two main factors with major impact:
 (i) features describing the entire volume rather than each B-scan are more discriminative; and
 (ii) a pre-processing stage with denoising is fundamental.
 
@@ -19,5 +19,5 @@ Results in~\cite{rethinopaty20016apr-repoICPR} indicate two methodology factors 
 Other observations include the facts that
 (i) to represent B-scans, local mapping in conjunction with dimension reduction, either using \gls{pca} or \gls{bow}, improve the results.
 However, the combination of both decreases the performance in comparison to non reduced histogram representation;
-(ii) building \gls{bow} models from concatenated detected features, might lead to the curse of dimensionality, which would explain why the \gls{rbf}-\gls{svm} overfits in~\cite{Alsaih2016apr-repoICPR, liu20016apr-repoICPR}.
-(ii) building \gls{bow} models from the concatenation of all detected features for each B-scan~\cite{Alsaih2016apr-repoICPR, liu20016apr-repoICPR}, might lead to the curse of dimensionality since $128$ samples per volume is not enough to describe a space with a number of dimensions of the order of millions; which could explain the over-fitting using \gls{rbf}-\gls{svm} as in.
+(ii) building \gls{bow} models from concatenated detected features, might lead to the curse of dimensionality, which would explain why the \gls{rbf}-\gls{svm} overfits in~\cite{liu20016apr-repoICPR}.
+(ii) building \gls{bow} models from the concatenation of all detected features for each B-scan~\cite{liu20016apr-repoICPR}, might lead to the curse of dimensionality since $128$ samples per volume is not enough to describe a space with a number of dimensions of the order of millions; which could explain the over-fitting using \gls{rbf}-\gls{svm} as in.
