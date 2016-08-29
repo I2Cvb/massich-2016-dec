@@ -2,19 +2,32 @@
 \graphicspath{ {./content/method/figures/} }
 
 \section{Data}\label{sec:data}
-A common dataset is required to compare different methodologies.
-Despite the fact that lack of public data is a common claim in the medical image community~\cite{giger2008anniversary}, the ophtalmic community has recently made available public dataset, mainly gathered at Duke University~\cite{farsiu2014quantitative,Srinivasan2014}.
-Although these datasets have been used by Venhuizen~\emph{et~al.}~\cite{Venhuizen2015} and Srinivasan~\emph{et~al.}~\cite{Srinivasan2014}, they are not suitable for our problem.
+Proper comparison of different methodologies require a common dataset to test
+these methodologies.
+The lack of public data for comparing methodologies is recurrent claim in the
+medical image community~\cite{giger2008anniversary}.
+To amend this limitation, Duke Univeristy made two \gls{sdoct} datasets
+available to the ophtalmic community~\cite{farsiu2014quantitative,Srinivasan2014}.
 
-Venhuizen~\emph{et~al.} have evaluated their framework on a large public dataset of $384$ \gls{oct} annotated volumes classified either as \gls{amd} or normal cases.
-Our goal, however, remains to focus on the detection of \gls{dme} rather than \gls{amd}, despite the interest of testing the frameworks against a large dataset.
+The rest of this section highlights the advantages and disadvantages of the
+datasets provided by Duke University, points out why this datasets cannot be
+used for our purposes and finally describes our data: \emph{the \gls{seri} dataset}; which is now publicly available through~\cite{seri2016apr-repoICPR}.
 
-In the contrary, Srinivasan~\emph{et~al.} have tested their framework using a public dataset containing \gls{amd}, \gls{dme}, and normal volumes~\cite{Srinivasan2014}.
-The data, however, have been denoised, aligned, and cropped, without access to the original set of images.
+The former dataset from Duke University consists of $384$ \gls{oct} annotated volumes classified
+either as \gls{amd} or normal cases.
+Despite the advantage of testing in large datasets, this dataset cannot be used to conduct our study since we are interested in \gls{dme} and not \gls{amd}.
+This dataset has been used by Venhuizen~\emph{et~al.}~\cite{Venhuizen2015} to
+test their method since their main interest is \gls{amd} detection.
+The later dataset from Duke Univeristy consists of $45$ pre-processed \gls{oct}
+volumes and labeled as \gls{amd}, \gls{dme}, and normal. Despite this dataset is
+suitable to our goal of classifying \gls{dme} vs normal volumes, the dataset has
+been dropped since there is no access to the original data. All volumes have
+been denoised, aligned and cropped. This dataset has been used to conduct the
+experimentation reported by Srinivasan~\emph{et~al.}~\cite{Srinivasan2014}.
 
-Therefore, we use the \gls{seri} dataset to conduct this study~\cite{seri2016apr-repoICPR}.
-This dataset has been acquired by the \gls{seri}, using CIRRUS TM (Carl Zeiss Meditec, Inc., Dublin, CA) \gls{sdoct} device.
-The dataset consists of 32 \gls{oct} volumes, subdivided into 16 \gls{dme} and 16 normal cases.
+
+The dataset to conduct our study has been acquired by the \gls{seri}, using CIRRUS TM (Carl Zeiss Meditec, Inc., Dublin, CA) \gls{sdoct} device.
+This dataset consists of 32 \gls{oct} volumes, subdivided into 16 \gls{dme} and 16 normal cases.
 Each volume contains $128$ B-scans with a resolution of \SI[product-units=repeat]{512x1024}{\px}.
 All \gls{sdoct} images have been read and assessed by trained graders and identified as normal or \gls{dme} cases, based on evaluation of retinal thickening, hard exudates, intraretinal cystoid space formation and subretinal fluid (see Fig.\,\ref{fig:bbdd}).
 
