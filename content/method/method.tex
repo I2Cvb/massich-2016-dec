@@ -22,9 +22,19 @@ while, the latter use a descriptor based on the layer thickness which require a 
 
 
 \subsection{Evaluation}\label{sec:evaluation}
-All the experiments are evaluated in terms of \gls{se} and \gls{sp} (see Fig.\,\ref{fig:evaluation}) using the \gls{ltpocv} strategy, in line with \cite{Lemaintre2015miccaiOCT}.
-Therefore, at each cross-validation iteration, a \gls{dme} and normal volumes are kept for testing, while the remaining volumes are used as training.
-The \gls{se} evaluates the performance of the classifier with respect to the positive class, while the \gls{sp} evaluates its performance with respect to negative class.
+All the experiments are evaluated in terms of \gls{se} and \gls{sp} (see
+Fig.\,\ref{fig:evaluation}) using the \gls{ltpocv} strategy.\footnote{the same
+  evaluation strategy was applied~\cite{Lemaintre2015miccaiOCT}}
+\gls{se} evaluates the performance of the classifier with respect to the
+positive class, while the \gls{sp} does the same with respect to negative class.
+\gls{ltpocv} keeps two volumes (one normal and one \gls{dme}) for testing while
+the remaining volumes are used as training. The advantage of using \gls{ltpocv} over \gls{lopocv} is
+that \gls{ltpocv} keeps the training data balanced.  
+The main drawback of using \gls{ltpocv} (or \gls{lopocv}) is that despite
+reporting robust performance estimators, variance of this descriptors cannot be
+computed. 
+Despite this limitation, \gls{ltpocv} strategy has been adopted here, 
+since regular \gls{cv} cannot be applied due to the reduced size of the dataset.
 
 \input{./content/method/figures/evaluation_corolary_def.tex}
 \begin{figure}
@@ -71,6 +81,4 @@ The \gls{se} evaluates the performance of the classifier with respect to the pos
   \label{fig:evaluation}
 \end{figure}
 
-Subsequently, no \gls{se} or \gls{sp} variance can be reported.
-%However, \gls{ltpocv} strategy has been adopted despite this limitation due to the reduced size of the dataset.
 
