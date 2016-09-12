@@ -19,5 +19,5 @@ Results in~\cite{rethinopaty20016apr-repoICPR} indicate two main findings with m
 Other observations include the facts that
 (i) to represent B-scans, local mapping in conjunction with dimension reduction, either using \gls{pca} or \gls{bow}, improve the results.
 However, the combination of both decreases the performance in comparison to non reduced histogram representation;
-(ii) building \gls{bow} models from concatenated detected features, might lead to the curse of dimensionality, which would explain why the \gls{rbf}-\gls{svm} overfits in~\cite{liu20016apr-repoICPR};
-(iii) building \gls{bow} models from the concatenation of all features for each B-scan, might lead to the curse of dimensionality since $128$ samples per volume is not enough to describe a space with a number of dimensions of the order of thousands; which could explain the over-fitting using \gls{rbf}-\gls{svm} as in~\cite{liu20016apr-repoICPR}.
+% (ii) building \gls{bow} models from concatenated detected features, might lead to the curse of dimensionality, which would explain why the \gls{rbf}-\gls{svm} overfits in~\cite{liu20016apr-repoICPR};
+(ii) building \gls{bow} models from the concatenation of all features for each B-scan, might lead to the curse of dimensionality since $128$ samples per volume is not enough to describe a space with a number of dimensions of the order of thousands; which could explain the over-fitting using \gls{rbf}-\gls{svm} as in~\cite{liu20016apr-repoICPR}.
